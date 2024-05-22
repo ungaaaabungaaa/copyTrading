@@ -1,19 +1,34 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import { Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from '../pages/Home';
+import SignUp from '../pages/SignUp';
+import Login from '../pages/Login';
+import Profile from '../pages/Profile';
+import CompoundTrading from '../pages/CompoundTrading';
+import InvestingTrading from '../pages/InvestingTrading';
+import Contact from '../pages/Contact';
+import Terms from '../pages/Terms';
+import Deposit from '../pages/Deposit';
+import PrivateRoute from '../components/PrivateRoute';
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  const { currentUser } = useAuth();
-
+const AppRoutes = () => {
   return (
-    <Route
-      {...rest}
-      render={props => {
-        return currentUser ? <Component {...props} /> : <Redirect to="/login" />;
-      }}
-    />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/compound" element={<CompoundTrading />} />
+          <Route path="/investing" element={<InvestingTrading />} />
+          <Route path="/deposit" element={<Deposit />} />
+        </Route>
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/terms" element={<Terms />} />
+      </Routes>
+    </Router>
   );
 };
 
-export default PrivateRoute;
+export default AppRoutes;

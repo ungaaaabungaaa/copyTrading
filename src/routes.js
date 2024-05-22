@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
@@ -11,22 +11,24 @@ import Terms from './pages/Terms';
 import Deposit from './pages/Deposit';
 import PrivateRoute from './components/PrivateRoute';
 
-const Routes = () => {
+const AppRoutes = () => {
   return (
     <Router>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/signup" component={SignUp} />
-        <Route path="/login" component={Login} />
-        <PrivateRoute path="/profile" component={Profile} />
-        <PrivateRoute path="/compound" component={CompoundTrading} />
-        <PrivateRoute path="/investing" component={InvestingTrading} />
-        <PrivateRoute path="/deposit" component={Deposit} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/terms" component={Terms} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/compound" element={<CompoundTrading />} />
+          <Route path="/investing" element={<InvestingTrading />} />
+          <Route path="/deposit" element={<Deposit />} />
+        </Route>
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/terms" element={<Terms />} />
+      </Routes>
     </Router>
   );
 };
 
-export default Routes;
+export default AppRoutes;
