@@ -18,7 +18,7 @@ const SplashScreen = () => {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '55vh',
+    height: '14vh',
     textAlign: 'center',
   };
 
