@@ -1,6 +1,77 @@
 .header_section
 {
     width: 100vw;
-    margin-top: 1.1%;
-    margin-bottom: 1.1%;
+    display: grid;
+    margin: 0;
+    height: auto;
+    padding-top: 1.2%;
+    padding-bottom: 1.2%;
+    background-color: transparent;
+    grid-template-columns: 15% 10% 25% 20% 20% 10%;
+}
+
+.Header_logo
+{
+    grid-column-start: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header_buttons
+{
+    grid-column-start: 3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.header_login
+{
+    grid-column-start: 5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+
+.header_button
+{
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.5s, border-radius 0.5s;
+}
+
+.header_button:hover
+{
+    background-color: #2b2d31;
+    border-radius: 0.6rem;
+    border: none;
+}
+
+.header_login_button
+{
+    color: white;
+    /* Changed to inline-block for proper sizing */
+    border: 1px solid;
+    border-color: #6C63FF;
+    background-color: transparent;
+    font-size: medium;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: color .2s ease-in;
+    transition: background-color 0.5s,
+}
+
+.header_login_button:hover
+{
+    /* Changed to inline-block for proper sizing */
+    background-color: #6C63FF;
 }

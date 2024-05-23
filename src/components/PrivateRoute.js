@@ -1,34 +1,54 @@
+// Header.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from '../pages/Home';
-import SignUp from '../pages/SignUp';
-import Login from '../pages/Login';
-import Profile from '../pages/Profile';
-import CompoundTrading from '../pages/CompoundTrading';
-import InvestingTrading from '../pages/InvestingTrading';
-import Contact from '../pages/Contact';
-import Terms from '../pages/Terms';
-import Deposit from '../pages/Deposit';
-import PrivateRoute from '../components/PrivateRoute';
+import { useNavigate } from 'react-router-dom';
+import '../styles/header.css';
+import { getAuth, signOut } from 'firebase/auth';
+import { useAuth } from '../contexts/AuthContext';
 
-const AppRoutes = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
-        <Route element={<PrivateRoute />}>
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/compound" element={<CompoundTrading />} />
-          <Route path="/investing" element={<InvestingTrading />} />
-          <Route path="/deposit" element={<Deposit />} />
-        </Route>
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/terms" element={<Terms />} />
-      </Routes>
-    </Router>
-  );
+const Header = () => {
+    const { currentUser } = useAuth();
+    const navigate = useNavigate();
+    const auth = getAuth();
+
+    const handleLogout = async () => {
+        await signOut(auth);
+        navigate('/login');
+    };
+
+    const handleProtectedRoute = (path) => {
+        if (currentUser) {
+            navigate(path);
+        } else {
+            navigate('/login');
+        }
+    };
+
+    return (
+        <div className='header_section'>
+            <div className='Header_logo' onClick={() => navigate('/')}>
+                <h3>Trades<span className='highlight'>Hub</span></h3>
+            </div>
+            <div className='header_buttons'>
+                <button className='header_button' onClick={() => handleProtectedRoute('/compound')}>Compound</button>
+                <button className='header_button' onClick={() => handleProtectedRoute('/investing')}>Invest</button>
+            </div>
+            <div className='header_login'>
+                {currentUser ? (
+                    <>
+                        <button className='header_login_button' onClick={() => navigate('/profile')}>Profile</button>
+                        <br />
+                        <button className='header_button2' onClick={handleLogout}>Logout</button>
+                    </>
+                ) : (
+                    <>
+                        <button className='header_login_button' onClick={() => navigate('/login')}>Login</button>
+                        <br />
+                        <button className='header_button2' onClick={() => navigate('/signup')}>Signup</button>
+                    </>
+                )}
+            </div>
+        </div>
+    );
 };
 
-export default AppRoutes;
+export default Header;

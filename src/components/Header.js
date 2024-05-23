@@ -1,20 +1,60 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/header.css'
-import { getAuth } from 'firebase/auth';
-
-
-// if user logged in hide the buttons and if not unhide the buttons 
-// if user looged in  inside of the button render profile and logout 
-// if user not logged in show signup and login button and route them!
-
+import { getAuth, signOut } from 'firebase/auth';
+import { useAuth } from '../contexts/AuthContext';
 
 const Header = () => {
+    const { currentUser } = useAuth();
+    const navigate = useNavigate();
+    const auth = getAuth();
+
+    const handleLogout = async () => {
+        await signOut(auth);
+        navigate('/login');
+    };
+
+    const handleCompoundClick = () => {
+        if (currentUser) {
+            navigate('/compound');
+        } else {
+            navigate('/login');
+        }
+    };
+
+    const handleInvestingClick = () => {
+        if (currentUser) {
+            navigate('/investing');
+        } else {
+            navigate('/login');
+        }
+    };
 
     return (
-        <>
-        </>
+        <div className='header_section'>
+            <div className='Header_logo' onClick={() => navigate('/')}>
+                <h3>Trades<span className='highlight'>Hub</span></h3>
+            </div>
+            <div className='header_buttons'>
+                <button className='header_button' onClick={handleCompoundClick}>Compound</button>
+                <button className='header_button' onClick={handleInvestingClick}>Invest</button>
+            </div>
+            <div className='header_login'>
+                {currentUser ? (
+                    <>
+                        <button className='header_login_button' onClick={() => navigate('/profile')}>Profile</button>
+                        <br/>
+                        <button className='header_button2' onClick={handleLogout}>Logout</button>
+                    </>
+                ) : (
+                    <>
+                        <button className='header_login_button' onClick={() => navigate('/login')}>Login</button>
+                        <br/>
+                        <button className='header_button2' onClick={() => navigate('/signup')}>Signup</button>
+                    </>
+                )}
+            </div>
+        </div>
     );
 };
-
 
 export default Header;
