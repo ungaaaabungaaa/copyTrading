@@ -58,3 +58,7 @@ button {
     transition: color .2s ease-in;
     /* Added padding transition */
 }
+.text-center
+{
+    text-align: center;
+}

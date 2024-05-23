@@ -1,13 +1,12 @@
-.signUp_Section
+.login_section
 {
-    min-width: 100vw;
-    height: 100vh;
+    width: 100vw;
     height: 98vh;
     display: grid;
     grid-template-columns: 55% 45%;
 }
 
-.signUp_animation
+.login_animation
 {
     grid-column-start: 1;
     width: 100%;
@@ -17,7 +16,7 @@
     justify-content: center;
 }
 
-.signUp_container
+.login_container
 {
     grid-column-start: 2;
     width: 100%;
@@ -28,7 +27,7 @@
     justify-content: center;
 }
 
-.signUp_form
+.login_form
 {
     width: 62%;
     display: flex;
@@ -38,7 +37,7 @@
 
 }
 
-.signUp_input
+.login_input
 {
     width: 100%;
     background-color: transparent;
@@ -46,7 +45,7 @@
     margin-bottom: 2.1%;
 }
 
-.signUp_btn
+.login_btn
 {
     width: 100%;
 }

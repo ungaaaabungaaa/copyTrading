@@ -6,7 +6,10 @@ import Header from '../components/Header'
 function deposit()
 {
     return (
+        <>
+        <Header></Header>
         <Footer></Footer>
+        </>
     ); 
 }
 

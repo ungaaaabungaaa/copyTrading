@@ -6,7 +6,10 @@ import Footer from '../components/footer';
 function compoundTrading()
 {
     return (
+    <>
+    <Header></Header>
     <Footer></Footer>
+    </>
   ); 
 }
 
