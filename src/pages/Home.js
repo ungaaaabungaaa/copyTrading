@@ -1,10 +1,11 @@
 import React from 'react';
+import Footer from '../components/footer';
 import '../styles/global.css';
 
 function home()
 {
     return (
-    <h1>Homepage</h1>
+      <Footer></Footer>
   ); 
 }
 

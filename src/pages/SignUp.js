@@ -1,13 +1,12 @@
 import React from 'react';
 import '../styles/signUp.css'
+import Footer from '../components/footer';
 
 function signUp()
 {
-     return (
-     <div  className="signUpLayout">
-        <h1>hello</h1>
-     </div>
-  );
+   return (
+      <Footer></Footer>
+   ); 
 }
 
 

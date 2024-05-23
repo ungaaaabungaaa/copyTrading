@@ -1,0 +1,27 @@
+.footer
+{
+    width: 100vw;
+    height: auto;
+    background-color: #6C63FF;
+    display: grid;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 5% 25% 45% 20% 5%;
+}
+
+.copyRight_section
+{
+    grid-column-start: 2;
+    width: 100%;
+}
+
+
+.footer_links_section {
+    grid-column-start: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}

@@ -4,6 +4,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    background-color: orange;
     flex-direction: row;
     justify-content: center;
 }

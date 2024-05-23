@@ -1,10 +1,11 @@
 import React from 'react';
 import '../styles/global.css';
+import Footer from '../components/footer';
 
 function compoundTrading()
 {
     return (
-    <h1>Hello, World!</h1>
+    <Footer></Footer>
   ); 
 }
 
