@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Deposit from './pages/Deposit';
 import PrivateRoute from './components/PrivateRoute';
+import NotFoundPage from './pages/404page';
 
 const AppRoutes = () => {
   return (
@@ -26,6 +27,7 @@ const AppRoutes = () => {
         </Route>
         <Route path="/contact" element={<Contact />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );
