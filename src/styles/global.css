@@ -29,8 +29,32 @@ body {
     color: #6C63FF;
 }
 
-
 ul 
 {
     list-style-type: none;
+}
+
+.card_background
+{
+    background-color: #2b2d31;
+}
+
+.outlines {
+    border: solid 1px #e4e4e7;
+}
+
+button {
+    padding: 1rem 2.8rem;
+    /* Adjusted padding values */
+    background-color: #6C63FF;
+    color: white;
+    display: inline-block;
+    /* Changed to inline-block for proper sizing */
+    border: 1px solid;
+    border-color: #6C63FF;
+    font-size: medium;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: color .2s ease-in;
+    /* Added padding transition */
 }

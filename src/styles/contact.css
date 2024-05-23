@@ -1,0 +1,92 @@
+/* If you're using Font Awesome icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+.contactSection
+{
+    width: 100vw;
+    height: 96vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    grid-template-columns: 10% 50% 35% 5%;
+    grid-template-rows: 100%;
+    gap: 0px;
+}
+
+.contactTitle
+{
+    grid-column-start: 2;
+    width: 100%;
+    margin-top: 2.1%;
+    height: 100%;
+}
+
+.contactCard
+{
+    background-color: #2b2d31;
+    grid-column-start: 3;
+    width: 92%;
+    padding-left: 5%;
+    text-overflow: ellipsis;
+    border-radius: 1.6rem;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 0.2rem;
+}
+
+#contactForm
+{
+    width: 100%;
+}
+
+input
+    {
+        text-align: start;
+        padding-top: 0.8rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.8rem;
+        width: 85%;
+        color: white;
+        background-color: #2b2d31;
+        border: solid 2px #e4e4e7;
+        outline: none;
+        border-radius: 0.6rem;
+    }
+
+    input::placeholder {
+        color: #999; /* Example color */
+    }
+
+    textarea
+    {
+        text-align: start;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        width: 85%;
+        color: white;
+        padding-left: 1.2rem;
+        border-radius: 0.6rem;
+        height: 6rem;
+        outline: none;
+        background-color: #2b2d31;
+        border: solid 2px #e4e4e7;
+        resize: none;
+    }
+
