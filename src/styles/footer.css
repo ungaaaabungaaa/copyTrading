@@ -4,8 +4,8 @@
     height: auto;
     background-color: #6C63FF;
     display: grid;
-    padding-top: 0.1%;
-    padding-bottom: 0.1%;
+    padding-top: 0.4%;
+    padding-bottom: 0.4%;
     align-items: center;
     justify-content: center;
     grid-template-columns: 5% 25% 45% 20% 5%;
@@ -24,4 +24,18 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+
+.links
+{
+    margin-top: 1.1%;
+    margin-bottom: 1.1%;
+    text-decoration: none;
+    color: white;
+    font-size: medium;
+}
+
+.links:hover
+{
+    color: #000;
 }

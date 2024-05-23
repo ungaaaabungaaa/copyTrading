@@ -9,6 +9,7 @@ import InvestingTrading from './pages/InvestingTrading';
 import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Deposit from './pages/Deposit';
+import Privacy from './pages/Privacy';
 import PrivateRoute from './components/PrivateRoute';
 import NotFoundPage from './pages/404page';
 
@@ -27,6 +28,7 @@ const AppRoutes = () => {
         </Route>
         <Route path="/contact" element={<Contact />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path='/privacy' element={<Privacy />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
