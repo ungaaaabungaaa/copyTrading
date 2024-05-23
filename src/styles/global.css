@@ -5,7 +5,6 @@ body {
     inset: 0;
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 100%;
     background-color: #0b0b15;
     display: flex;
@@ -15,7 +14,6 @@ body {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
     color: white;
 }
 
@@ -26,3 +24,13 @@ body {
     /* Optional: just make scrollbar invisible */
 }
 
+.highlight
+{
+    color: #6C63FF;
+}
+
+
+ul 
+{
+    list-style-type: none;
+}
