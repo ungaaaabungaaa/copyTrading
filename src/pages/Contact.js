@@ -6,7 +6,6 @@ import animationData from '../assets/Animations/contact.json';
 import emailjs from '@emailjs/browser';
 
 
-
 function Contact()
 {
 
