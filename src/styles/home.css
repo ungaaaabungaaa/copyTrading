@@ -1,7 +1,6 @@
 .hero_1
 {
     width: 100vw;
-    height: 62vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +12,6 @@
 .hero_2
 {
     width: 100vw;
-    height: 62vh;
     display: grid;
     grid-template-columns: 5% 35% 55% 5%;
     margin: 0;

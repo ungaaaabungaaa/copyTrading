@@ -17,20 +17,10 @@ function home()
       <>
       <Header></Header>
       <div className='hero_1'>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
         <Hero1></Hero1>
         <h1 className='heading'>Copy Trades,<span className='highlight'> Grow Your Wealth</span></h1>
         <p className='bio'>effortlessly grow your portfolio by copying the trades of our <br /> top-performing <span className='highlight'>master trader.</span></p>
         <button onClick={handleButtonClick} >Start Now</button>
-        <br></br>
-        <br></br>
-        <br></br>
         <br></br>
       </div>
       <br/>

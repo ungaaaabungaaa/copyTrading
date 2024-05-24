@@ -105,7 +105,6 @@ function Contact()
                 <p>Have a question or want to work together? <span className='highlight'>Send us a message</span></p>
                 <div className="contact-info">
                     <ul>
-                        <li><i className="fas fa-map-marker-alt"></i> A 1st, 29, Adi Kabir Ashram Main Rd, RT Nagar, <br/> Bengaluru, Karnataka 560032</li>
                         <li><i className="fas fa-envelope"></i>Tradeshub.Crypto@ud.me</li>
                     </ul>
                 </div>
