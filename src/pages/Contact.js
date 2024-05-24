@@ -4,6 +4,7 @@ import '../styles/contact.css'
 import Lottie from 'react-lottie';
 import animationData from '../assets/Animations/contact.json';
 import emailjs from '@emailjs/browser';
+import Header from '../components/Header';
 
 
 function Contact()
@@ -97,6 +98,7 @@ function Contact()
 
     return (
         <>
+        <Header></Header>
         <div className='contactSection'>
             <div className='contactTitle'>
                 <h1>Get in Touch</h1>
