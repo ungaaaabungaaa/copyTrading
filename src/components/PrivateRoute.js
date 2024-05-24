@@ -1,54 +1,21 @@
-// Header.js
+// PrivateRoute.js
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/header.css';
-import { getAuth, signOut } from 'firebase/auth';
+import { Navigate, Route } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
-const Header = () => {
-    const { currentUser } = useAuth();
-    const navigate = useNavigate();
-    const auth = getAuth();
+const PrivateRoute = ({ element: Element, ...rest }) => {
+  const { currentUser, profileComplete } = useAuth();
 
-    const handleLogout = async () => {
-        await signOut(auth);
-        navigate('/login');
-    };
+  if (!currentUser) {
+    return <Navigate to="/login" />;
+  }
 
-    const handleProtectedRoute = (path) => {
-        if (currentUser) {
-            navigate(path);
-        } else {
-            navigate('/login');
-        }
-    };
+  if (currentUser && !profileComplete) {
+    console.log("Profile is Not found from private Route");
+    return <Navigate to="/profile" />;
+  }
 
-    return (
-        <div className='header_section'>
-            <div className='Header_logo' onClick={() => navigate('/')}>
-                <h3>Trades<span className='highlight'>Hub</span></h3>
-            </div>
-            <div className='header_buttons'>
-                <button className='header_button' onClick={() => handleProtectedRoute('/compound')}>Compound</button>
-                <button className='header_button' onClick={() => handleProtectedRoute('/investing')}>Invest</button>
-            </div>
-            <div className='header_login'>
-                {currentUser ? (
-                    <>
-                        <button className='header_login_button' onClick={() => navigate('/profile')}>Profile</button>
-                        <br />
-                        <button className='header_button2' onClick={handleLogout}>Logout</button>
-                    </>
-                ) : (
-                    <>
-                        <button className='header_login_button' onClick={() => navigate('/login')}>Login</button>
-                        <br />
-                        <button className='header_button2' onClick={() => navigate('/signup')}>Signup</button>
-                    </>
-                )}
-            </div>
-        </div>
-    );
+  return <Route {...rest} element={<Element />} />;
 };
 
-export default Header;
+export default PrivateRoute;

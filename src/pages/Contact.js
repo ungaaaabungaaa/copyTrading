@@ -120,11 +120,11 @@ function Contact()
                 <p>Fill out the form below and we'll get back to you as soon as possible.</p>
                 <br/>
                 <form id="contactForm" ref={form} onSubmit={sendMail}>
-                        <label htmlFor="name">Name</label><br/><br/>
-                        <input type="text" placeholder='Name' id="name" name="name"/><br/><br/>
-                        <label htmlFor="email">Email Address</label><br/><br/>
-                        <input placeholder='Email' type="email" id="email" name="email"/><br/><br/>
-                        <label htmlFor="message">Message</label><br/><br/>
+                        <label htmlFor="name">Name</label> <br/>  <br/>
+                        <input type="text" placeholder='Name' id="name" name="name"/>  <br/>  <br/>
+                        <label htmlFor="email">Email Address</label>  <br/>  <br/>
+                        <input placeholder='Email' type="email" id="email" name="email"/>  <br/>  <br/>
+                        <label htmlFor="message">Message</label>  <br/>  <br/>
                         <textarea placeholder='Enter Your Message' id="message" name="message"></textarea><br/><br/>
                         <button type="submit">Send</button>
                     </form>

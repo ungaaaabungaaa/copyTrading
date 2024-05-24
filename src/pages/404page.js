@@ -17,14 +17,29 @@ const NotFoundPage = () => {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '55vh',
+    width: '23%',
     textAlign: 'center',
   };
 
+  const containerStyle2 = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100vw',
+    height: '100vh',
+    textAlign: 'center',
+  };
+  
+
   return (
-    <div style={containerStyle}>
+    <>
+    <div style={containerStyle2}>
+        <div style={containerStyle}>
       <Lottie options={defaultOptions}/>
+       </div>
     </div>
+    </>
   );
 };
 
