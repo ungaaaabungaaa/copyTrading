@@ -28,6 +28,29 @@ const CompoundingCalculator = () => {
 
   return (
     <>
+     <div className='CompoundCalculator_box_layout'>
+            <div className='box1'>
+                <br></br>
+                <br></br>
+                <p>Initial Investment <br></br> <br></br> ${amount}</p>
+                <br></br>
+            </div>
+            <div className='box2'>
+                <br></br>
+                <br></br>
+                <p>Compounded Returns <br></br> <br></br> ${compoundedReturns}</p>
+                <br></br>
+                <br></br>
+            </div>
+            <div className='box3'>
+                <br></br>
+                <br></br>
+                <p>Total Amount <br></br> <br></br> ${totalAmount}</p>
+                <br></br>
+                <br></br>
+            </div>
+
+      </div>
       <div className='compoundCalculator_section'>
         <label htmlFor="amount">Enter investment amount</label>
         <br></br>
@@ -52,29 +75,7 @@ const CompoundingCalculator = () => {
         <button onClick={calculateReturns}>Calculate Returns</button>
         <br></br>
       </div>
-      <div className='CompoundCalculator_box_layout'>
-            <div className='box1'>
-                <br></br>
-                <br></br>
-                <p>Initial Investment <br></br> <br></br> ${amount}</p>
-                <br></br>
-            </div>
-            <div className='box2'>
-                <br></br>
-                <br></br>
-                <p>Compounded Returns <br></br> <br></br> ${compoundedReturns}</p>
-                <br></br>
-                <br></br>
-            </div>
-            <div className='box3'>
-                <br></br>
-                <br></br>
-                <p>Total Amount <br></br> <br></br> ${totalAmount}</p>
-                <br></br>
-                <br></br>
-            </div>
-
-      </div>
+     
 
     </>
   );
