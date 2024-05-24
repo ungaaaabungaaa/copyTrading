@@ -59,6 +59,8 @@
     .login_section
     {
         width: 100vw;
+        margin-top: 2.1%;
+        margin-bottom: 2.1%;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 30% 70%;

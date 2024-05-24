@@ -58,6 +58,8 @@
     .signUp_Section
     {
         width: 100%;
+        margin-top: 2.1%;
+        margin-bottom: 2.1%;
         height: 100%;
         display: grid;
         grid-template-columns: 100%;
