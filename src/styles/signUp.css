@@ -50,3 +50,46 @@
 {
     width: 100%;
 }
+
+
+/* Styles for mobile and tablet devices */
+@media only screen and (max-width: 768px) {
+    
+    .signUp_Section
+    {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+    }
+
+    .signUp_animation
+    {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .signUp_container
+    {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .signUp_form
+    {
+        width: 80%;
+    }
+    
+
+}

@@ -49,3 +49,45 @@
 {
     width: 100%;
 }
+
+
+/* Styles for mobile and tablet devices */
+@media only screen and (max-width: 768px) {
+    
+    .login_section
+    {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+    }
+
+    .login_animation
+    {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login_container
+    {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login_form
+    {
+        width: 80%;
+    }
+    
+
+}

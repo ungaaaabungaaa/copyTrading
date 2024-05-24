@@ -38,7 +38,7 @@ function Login() {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '57%',
+    height: '92%',
     textAlign: 'center',
   };
 

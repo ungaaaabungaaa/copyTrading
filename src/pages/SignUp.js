@@ -56,7 +56,6 @@ function SignUp()
    return (
       <>
       <Header></Header>
-      
       <div className="signUp_Section">
         <div className="signUp_animation">
           <div style={containerStyle}>
