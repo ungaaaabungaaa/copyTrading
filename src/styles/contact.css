@@ -3,7 +3,6 @@
 .contactSection
 {
     width: 100vw;
-    height: 96vh;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -90,3 +89,43 @@ input
         resize: none;
     }
 
+
+/* Styles for mobile and tablet devices */
+@media only screen and (max-width: 768px) {
+    
+    .contactSection
+    {
+        width: 100vw;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 40% 60%;
+        gap: 0px;
+    }
+
+    .contactTitle
+    {
+        width: 100%;
+        grid-column-start: 2;
+        grid-row-start: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contactCard
+    {
+        width: 100%;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        height: 100%;
+        
+    }
+
+}
