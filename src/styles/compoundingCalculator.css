@@ -1,0 +1,65 @@
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+.compoundCalculator_section
+{
+    width: 30%;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.CompoundCalculator_Input
+{
+    background-color: transparent;
+    appearance: none; /* Hides the default arrow */
+    width: 100%;
+}
+
+.CompoundCalculator_box_layout
+{
+    padding-top: 2.1%;
+    padding-bottom: 2.1%;
+    width: 65%;
+    height: 32%;
+    display: grid;
+    align-items: center;
+    column-gap: 1.2rem;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-rows: 100%;
+}
+
+.box1
+{
+    grid-column-start: 2;
+}
+
+.box2
+{
+    grid-column-start: 3;
+}
+
+.box3
+{
+    grid-column-start: 4;
+}
+
+
+
+.box1,.box2,.box3
+{
+    width: 100%;
+    height: 100%;
+    background-color: #2b2d31;
+    border-radius: 1.4rem;
+}
