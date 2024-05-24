@@ -38,3 +38,31 @@
 {
     color: #6C63FF;
 }
+
+
+/* Styles for mobile and tablet devices */
+@media only screen and (max-width: 768px) {
+    .footer_links_section{
+        display: none;
+    }
+
+    .footer
+    {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 100%;
+        margin-top: 2.1%;
+        margin-bottom: 2.1%;
+    }
+
+    .copyRight_section
+    {
+        grid-column-start: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+}

@@ -75,3 +75,39 @@
     /* Changed to inline-block for proper sizing */
     background-color: #6C63FF;
 }
+
+
+/* Styles for mobile and tablet devices */
+@media only screen and (max-width: 768px) {
+    .header_section
+    {
+        width: 100vw;
+        display: grid;
+        margin: 0;
+        height: auto;
+        padding-top: 1.2%;
+        padding-bottom: 1.2%;
+        background-color: transparent;
+        grid-template-columns: 5% 25% 65% 5;
+    }
+
+    .header_buttons
+    {
+        display: none;
+    }
+
+    .header_login
+    {
+       display: none;
+    }
+
+    .Header_logo
+    {
+        grid-column-start: 2;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
