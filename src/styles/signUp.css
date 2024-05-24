@@ -62,6 +62,7 @@
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 30% 70%;
+        text-align: center;
     }
 
     .signUp_animation

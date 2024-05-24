@@ -54,12 +54,15 @@
 /* Styles for mobile and tablet devices */
 @media only screen and (max-width: 768px) {
     
+
+
     .login_section
     {
         width: 100vw;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 30% 70%;
+        text-align: center;
     }
 
     .login_animation
