@@ -63,7 +63,7 @@ const Profile = () => {
         <>
             <Header />
             <div className="profile_section">
-                <div style={containerStyle}>
+                <div>
                     <Lottie options={defaultOptions} />
                 </div>
                 <div className='profile_form_title'>
