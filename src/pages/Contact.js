@@ -5,6 +5,7 @@ import Lottie from 'react-lottie';
 import animationData from '../assets/Animations/contact.json';
 import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
+import Footer from '../components/footer'
 
 
 function Contact()
@@ -130,6 +131,7 @@ function Contact()
                     </form>
             </div>
         </div>
+        <Footer></Footer>
         </>
     ); 
 }
