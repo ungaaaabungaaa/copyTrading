@@ -85,6 +85,8 @@ function SignUp()
           </div>
         </div>
       </div>
+      <br></br>
+      <br></br>
       <Footer></Footer>
       </>
    ); 
