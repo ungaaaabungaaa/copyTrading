@@ -10,7 +10,7 @@ import Hero3 from '../components/hero3'
 function home()
 {
     const handleButtonClick = () => {
-      window.location.href = 'https://www.google.com';
+      window.location.href = 'https://i.bybit.com/OabQq5O?action=inviteToCopy';
     };
 
     return (
