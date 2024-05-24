@@ -35,8 +35,8 @@ const Header = () => {
                 <h3>Trades<span className='highlight'>Hub</span></h3>
             </div>
             <div className='header_buttons'>
-                <button className='header_button' onClick={handleCompoundClick}>Compound</button>
-                <button className='header_button' onClick={handleInvestingClick}>Invest</button>
+                <button className='header_button' onClick={handleCompoundClick}>MultiplX</button>
+                <button className='header_button' onClick={handleInvestingClick}>Earning Pool</button>
             </div>
             <div className='header_login'>
                 {currentUser ? (
