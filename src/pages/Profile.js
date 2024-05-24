@@ -7,9 +7,11 @@ import Lottie from 'react-lottie';
 import animationData from '../assets/Animations/profile.json';
 import { useAuth } from '../contexts/AuthContext'; // Assuming you have an authentication context
 import { auth, db } from '../firebase'; // Import auth and db directly
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
-    const { currentUser } = useAuth(); // Assuming you have access to the current user
+    const navigate = useNavigate(); // Initialize the useNavigate hook
+    const { currentUser } = useAuth(); 
     console.log(currentUser)
 
     const defaultOptions = {
@@ -90,7 +92,7 @@ const Profile = () => {
                             </select>
                         </div>
                         <button className='submit_button' type="submit">Submit</button>
-                        <p>Need Any Help? <span className='highlight'>Contact Us</span></p>
+                        <p>Need Any Help? <span onClick={() => navigate('/contact')} className='highlight'>Contact Us</span></p>
                     </form>
                 </div>
             </div>

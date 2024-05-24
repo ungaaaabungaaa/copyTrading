@@ -1,0 +1,49 @@
+.hero_1
+{
+    width: 100vw;
+    height: 62vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+}
+
+.hero_2
+{
+    width: 100vw;
+    height: 62vh;
+    display: grid;
+    grid-template-columns: 5% 35% 55% 5%;
+    margin: 0;
+}
+
+.heading
+{
+    margin-bottom: 0.1%;
+}
+
+.hero_2_animation
+{
+    width: 100%;
+    height: 100%;
+    grid-column-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.hero_2_titles
+{
+    width: 100%;
+    grid-column-start: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}

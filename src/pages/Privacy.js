@@ -4,6 +4,7 @@ import '../styles/privacy.css';
 import Footer from '../components/footer';
 import Lottie from 'react-lottie';
 import animationData from '../assets/Animations/privacy.json';
+import Header from '../components/Header';
 
 function Privacy() {
 
@@ -26,6 +27,7 @@ function Privacy() {
 
   return (
                 <>
+                <Header></Header>
                 <br />
                 <br />
                 <div className='privacy_section'>
