@@ -1,5 +1,6 @@
 import React from 'react';
 import Lottie from 'react-lottie';
+import '../styles/hero1.css'
 import animationData from '../assets/Animations/hero1.json';
 
 const Hero1 = () => {
@@ -13,19 +14,9 @@ const Hero1 = () => {
     }
     };
 
-  const containerStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '32%',
-    textAlign: 'center',
-  };
-
     return (
     <>
-   
-    <div style={containerStyle}>
+    <div className='containerStyle'>
       <Lottie options={defaultOptions}/>
     </div>
     </>
