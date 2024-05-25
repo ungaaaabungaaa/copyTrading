@@ -1,6 +1,9 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+import { getPerformance } from "firebase/performance";
+import { getAnalytics } from "firebase/analytics";
+
 
 const firebaseConfig = {
     // Your Firebase configuration
@@ -16,5 +19,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+
+// Initialize Performance Monitoring and get a reference to the service
+const perf = getPerformance(app);
+// Initialize Analytics and get a reference to the service
+const analytics = getAnalytics(app);
+
+
 
 export { auth, db };
