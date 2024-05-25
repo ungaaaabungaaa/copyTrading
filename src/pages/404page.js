@@ -1,6 +1,7 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 import animationData from '../assets/Animations/404.json';
+import '../styles/hero1.css'
 
 const NotFoundPage = () => {
   const defaultOptions = {
@@ -17,26 +18,18 @@ const NotFoundPage = () => {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '23%',
-    textAlign: 'center',
-  };
-
-  const containerStyle2 = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
     width: '100vw',
     height: '100vh',
     textAlign: 'center',
   };
+
   
 
   return (
     <>
-    <div style={containerStyle2}>
-        <div style={containerStyle}>
-      <Lottie options={defaultOptions}/>
+    <div style={containerStyle} >
+        <div className='containerStyle'>
+        <Lottie options={defaultOptions}/>
        </div>
     </div>
     </>
