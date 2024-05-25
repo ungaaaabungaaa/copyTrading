@@ -17,11 +17,10 @@ const CompoundingCalculator = () => {
 
   const calculateReturns = () => {
     const initialAmount = parseFloat(amount);
-    const durationInYears = parseFloat(duration) / 12; // Assuming duration is in months
+    const durationInYears = parseFloat(duration); // Assuming duration is in months
     const annualInterestRate = 0.1; // 10% interest rate
     const compoundedReturns = initialAmount * Math.pow(1 + annualInterestRate, durationInYears) - initialAmount;
     const totalAmount = initialAmount + compoundedReturns;
-
     setCompoundedReturns(compoundedReturns.toFixed(2));
     setTotalAmount(totalAmount.toFixed(2));
   };
