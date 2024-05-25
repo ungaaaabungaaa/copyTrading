@@ -27,7 +27,7 @@ function compoundTrading()
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '22%',
+    width: '32%',
     textAlign: 'center',
   };
 
@@ -53,10 +53,9 @@ function compoundTrading()
     return (
     <>
     <Header></Header>
-    
     <div className='compound_trading_section'>
       <div style={containerStyle}>
-        <Lottie options={defaultOptions}/>
+        <Lottie options={defaultOptions2}/>
       </div>
       <h1 className='heading'>Compound Trading <span className='highlight' > MultiplX </span> </h1>
       <p className='bio'>Maximize your investment potential with our Compound Trading  Try it now and see how <br/> your investments can <span className='highlight' >grow exponentially!</span></p>
@@ -65,7 +64,7 @@ function compoundTrading()
       <h1 className='heading'>Get Started <span className='highlight' > Now </span> </h1>
       <p className='bio'>Get Montly Returns on your investments & <span className='highlight' >Compouding Reward </span></p>
       <div style={containerStyle2}>
-        <Lottie options={defaultOptions2}/>
+        <Lottie options={defaultOptions}/>
       </div>
       <button>Start Now</button>
       <br></br>

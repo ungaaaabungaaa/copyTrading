@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/global.css';
 import '../styles/profile.css';
 import Footer from '../components/footer';
@@ -8,7 +8,7 @@ import animationData from '../assets/Animations/profile.json';
 import { useAuth } from '../contexts/AuthContext';
 import { db } from '../firebase';
 import { useNavigate } from 'react-router-dom';
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -26,6 +26,24 @@ const Profile = () => {
   const [firstName, setFirstName] = useState('');
   const [country, setCountry] = useState('');
   const [expertise, setExpertise] = useState('');
+  const [isUpdating, setIsUpdating] = useState(false);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      if (currentUser) {
+        const docRef = doc(db, 'profiles', currentUser.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const profileData = docSnap.data();
+          setFirstName(profileData.fullName || '');
+          setCountry(profileData.country || '');
+          setExpertise(profileData.expertise || '');
+          setIsUpdating(true);
+        }
+      }
+    };
+    fetchProfile();
+  }, [currentUser]);
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
@@ -95,7 +113,7 @@ const Profile = () => {
               </select>
             </div>
             <button className="submit_button" type="submit">
-              Submit
+              {isUpdating ? 'Update' : 'Upload'}
             </button>
             <p>
               Need Any Help?{' '}
