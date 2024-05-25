@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { auth, db } from '../firebase';
-import { doc, getDoc } from 'firebase/firestore'; // Import the necessary Firestore functions
+import { doc, getDoc } from 'firebase/firestore';
 
 const AuthContext = React.createContext();
 
@@ -18,24 +18,25 @@ export const AuthProvider = ({ children }) => {
       setCurrentUser(user);
       if (user) {
         try {
-          const docRef = doc(db, 'Profiles', user.uid); // Reference to the user document
-          const docSnapshot = await getDoc(docRef); // Retrieve the user document
+          const docRef = doc(db, 'profiles', user.uid);
+          const docSnapshot = await getDoc(docRef);
           if (docSnapshot.exists() && docSnapshot.data().isComplete) {
             setProfileComplete(true);
-            console.log("Profile is not found");
+            console.log("profile found");
+          
           } else {
             setProfileComplete(false);
+            console.log("profile not found");
           }
         } catch (error) {
           console.error('Error fetching user profile:', error);
-          console.log("Profile is  found");
+          setProfileComplete(false);
         }
       } else {
         setProfileComplete(false);
       }
       setLoading(false);
     });
-
     return unsubscribe;
   }, []);
 

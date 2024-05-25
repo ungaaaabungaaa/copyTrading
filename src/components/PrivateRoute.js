@@ -1,9 +1,9 @@
 // PrivateRoute.js
 import React from 'react';
-import { Navigate, Route } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
-const PrivateRoute = ({ element: Element, ...rest }) => {
+const PrivateRoute = () => {
   const { currentUser, profileComplete } = useAuth();
 
   if (!currentUser) {
@@ -11,11 +11,10 @@ const PrivateRoute = ({ element: Element, ...rest }) => {
   }
 
   if (currentUser && !profileComplete) {
-    console.log("Profile is Not found from private Route");
     return <Navigate to="/profile" />;
   }
 
-  return <Route {...rest} element={<Element />} />;
+  return <Outlet />;
 };
 
 export default PrivateRoute;

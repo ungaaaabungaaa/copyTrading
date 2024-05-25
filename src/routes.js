@@ -25,14 +25,12 @@ const AppRoutes = () => {
         <Route path="/investing" element={<InvestingTrading />} />
         <Route element={<PrivateRoute />}>
           <Route path="/deposit" element={<Deposit />} />
-          {/* Wrap Outlet with Route */}
-          <Route path="*" element={<Outlet />} />
         </Route>
         <Route path="/contact" element={<Contact />} />
         <Route path="/terms" element={<Terms />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      </Routes>x
     </Router>
   );
 };

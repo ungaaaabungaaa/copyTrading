@@ -35,6 +35,7 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
+    padding-bottom: 2.1%;
 }
 
 .contact-info ul {

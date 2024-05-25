@@ -128,7 +128,7 @@ function Contact()
                         <label htmlFor="message">Message</label>  <br/>  <br/>
                         <textarea placeholder='Enter Your Message' id="message" name="message"></textarea><br/><br/>
                         <button type="submit">Send</button>
-                    </form>
+                </form>
             </div>
         </div>
         <Footer></Footer>
