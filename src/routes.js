@@ -32,7 +32,7 @@ function AppRoutes() {
         <Route path="/terms" element={<Terms />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path="*" element={<NotFoundPage />} />
-      </Routes>x
+      </Routes>
     </Router>
   );
 }
