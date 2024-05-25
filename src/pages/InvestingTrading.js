@@ -60,8 +60,12 @@ function InvestingTrading()
                 <br></br>
                 <br></br>
                 <h2>8.1 <span className='highlight'>%</span></h2>
+                <p>Our advanced trading strategies generate consistent daily profits, <br></br> allowing you to grow your wealth over time.</p>
+                <button>Start Now</button>
             </div> 
         </div>
+        <br className='blanks' ></br>
+        <br className='blanks' ></br>
         <Footer></Footer>
         </>
     ); 

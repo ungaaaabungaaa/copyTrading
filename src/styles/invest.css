@@ -35,7 +35,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: 55% 45%;
-    text-align: end;
+    text-align: start;
 }
 
 .invest_title2
@@ -46,7 +46,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    text-align: center;
+    text-align: start;
     justify-content: center;
 }
 
@@ -116,7 +116,7 @@ h2
         align-items: center;
         grid-template-columns: 100%;
         grid-template-rows: 45% 55%;
-        text-align: end;
+
     }
 
     .invest_title2
@@ -148,6 +148,11 @@ h2
     {
         font-size: 5.2rem;
         margin: 0;
+    }
+
+    .blanks
+    {
+        display: none;
     }
         
 
