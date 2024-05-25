@@ -11,7 +11,7 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import PrivateRoute from './components/PrivateRoute';
 import NotFoundPage from './pages/404page';
-import Checkout from './pages/checkout';
+import Checkout from './pages/Checkout';
 import Dashboard from './pages/Dashboard';
 
 function AppRoutes() {
