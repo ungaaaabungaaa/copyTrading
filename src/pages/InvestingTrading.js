@@ -6,6 +6,7 @@ import '../styles/invest.css'
 import Lottie from 'react-lottie';
 import '../styles/hero2.css'
 import animationData from '../assets/Animations/invest.json';
+import animationData2 from '../assets/Animations/rocket.json';
 
 function InvestingTrading()
 {
@@ -14,6 +15,15 @@ function InvestingTrading()
         loop: true,
         autoplay: true,
         animationData: animationData,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+
+    const defaultOptions2 = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData2,
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice'
         }
@@ -35,6 +45,22 @@ function InvestingTrading()
                     <Lottie options={defaultOptions}/>
                 </div>
             </div>
+        </div>
+        <br></br>
+        <br></br>
+
+        <div className='invest_section2'>
+            <div className='invest_animation2'>
+            <div className='containerStyle2'>
+                    <Lottie options={defaultOptions2}/>
+                </div>
+            </div>
+            <div className='invest_title2'>
+                <h1 className='heading'>Today's Profit</h1>
+                <br></br>
+                <br></br>
+                <h2>8.1 <span className='highlight'>%</span></h2>
+            </div> 
         </div>
         <Footer></Footer>
         </>
