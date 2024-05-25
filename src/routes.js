@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
@@ -8,12 +8,13 @@ import CompoundTrading from './pages/CompoundTrading';
 import InvestingTrading from './pages/InvestingTrading';
 import Contact from './pages/Contact';
 import Terms from './pages/Terms';
-import Deposit from './pages/Deposit';
 import Privacy from './pages/Privacy';
 import PrivateRoute from './components/PrivateRoute';
 import NotFoundPage from './pages/404page';
+import Checkout from './pages/checkout';
+import Dashboard from './pages/Dashboard';
 
-const AppRoutes = () => {
+function AppRoutes() {
   return (
     <Router>
       <Routes>
@@ -24,7 +25,8 @@ const AppRoutes = () => {
         <Route path="/compound" element={<CompoundTrading />} />
         <Route path="/investing" element={<InvestingTrading />} />
         <Route element={<PrivateRoute />}>
-          <Route path="/deposit" element={<Deposit />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
         </Route>
         <Route path="/contact" element={<Contact />} />
         <Route path="/terms" element={<Terms />} />
@@ -33,6 +35,6 @@ const AppRoutes = () => {
       </Routes>x
     </Router>
   );
-};
+}
 
 export default AppRoutes;
