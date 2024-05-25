@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 import Header from '../components/Header'
 import '../styles/invest.css'
 import Lottie from 'react-lottie';
-import '../styles/hero1.css'
+import '../styles/hero2.css'
 import animationData from '../assets/Animations/invest.json';
 
 function InvestingTrading()
@@ -19,7 +19,7 @@ function InvestingTrading()
         }
     };
     
-
+    
 
     return (
         <>
@@ -31,7 +31,7 @@ function InvestingTrading()
                 <button>Get Started</button>
             </div>
             <div className='invest_animation'>
-                <div className='containerStyle'>
+                <div className='containerStyle2'>
                     <Lottie options={defaultOptions}/>
                 </div>
             </div>

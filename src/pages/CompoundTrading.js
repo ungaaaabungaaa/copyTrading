@@ -43,7 +43,7 @@ function compoundTrading()
       </div>
       <h1 className='heading'>Compound Trading <span className='highlight' > MultiplX </span> </h1>
       <p className='bio'>Maximize your investment potential with our Compound Trading  Try it now and see how <br/> your investments can <span className='highlight' >grow exponentially!</span></p>
-      <br></br>
+      <br className='blanks'></br>
       <CompoundingCalculator></CompoundingCalculator>
       <h1 className='heading'>Get Started <span className='highlight' > Now </span> </h1>
       <p className='bio'>Get Montly Returns on your investments & <span className='highlight' >Compouding Reward </span></p>
