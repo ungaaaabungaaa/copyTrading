@@ -8,6 +8,7 @@ import Lottie from 'react-lottie';
 import animationData from '../assets/Animations/compound.json';
 import animationData2 from '../assets/Animations/compound2.json';
 import CompoundingCalculator from '../components/compoundingCalculator';
+import '../styles/hero1.css'
 
 
 
@@ -22,15 +23,6 @@ function compoundTrading()
     }
     };
 
-  const containerStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '32%',
-    textAlign: 'center',
-  };
-
 
   const defaultOptions2 = {
     loop: true,
@@ -41,20 +33,12 @@ function compoundTrading()
     }
     };
 
-  const containerStyle2 = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '32%',
-    textAlign: 'center',
-  };
-
+ 
     return (
     <>
     <Header></Header>
     <div className='compound_trading_section'>
-      <div style={containerStyle}>
+      <div className='containerStyle'>
         <Lottie options={defaultOptions2}/>
       </div>
       <h1 className='heading'>Compound Trading <span className='highlight' > MultiplX </span> </h1>
@@ -63,7 +47,7 @@ function compoundTrading()
       <CompoundingCalculator></CompoundingCalculator>
       <h1 className='heading'>Get Started <span className='highlight' > Now </span> </h1>
       <p className='bio'>Get Montly Returns on your investments & <span className='highlight' >Compouding Reward </span></p>
-      <div style={containerStyle2}>
+      <div className='containerStyle'>
         <Lottie options={defaultOptions}/>
       </div>
       <button>Start Now</button>

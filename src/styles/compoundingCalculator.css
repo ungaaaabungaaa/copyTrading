@@ -8,6 +8,11 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.blanks
+{
+    display: none;
+}
+
 
 .compoundCalculator_section
 {
@@ -32,6 +37,7 @@ input[type="number"] {
     padding-bottom: 2.1%;
     width: 65%;
     height: 32%;
+    margin-top: 0;
     display: grid;
     align-items: center;
     column-gap: 1.2rem;
@@ -62,4 +68,58 @@ input[type="number"] {
     height: 100%;
     background-color: #2b2d31;
     border-radius: 1.4rem;
+}
+
+
+/* Styles for mobile and tablet devices */
+@media only screen and (max-width: 768px) {
+    
+
+    .blanks
+    {
+        display: block;
+    }
+    
+
+    .CompoundCalculator_box_layout
+    {
+        width: 100%;
+    }
+
+    .compoundCalculator_section
+    {
+        width: 80%;
+    }
+
+
+    .CompoundCalculator_box_layout
+    {
+        width: 92%;
+        height: auto;
+        display: grid;
+        align-items: center;
+        row-gap: 1.2rem;
+        grid-template-columns: 100%;
+        grid-template-rows: 5% 30% 30% 30% 5%;
+    }
+
+    .box1
+    {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    .box2
+    {
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+
+    .box3
+    {
+        grid-column-start: 1;
+        grid-row-start: 4;
+    }
+    
+
 }
