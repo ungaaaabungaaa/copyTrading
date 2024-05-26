@@ -31,10 +31,33 @@ function Checkout()
                 <Lottie options={defaultOptions}/>
             </div>
             </div>
-            <div className='checkout_form'>
+            <div className='checkout_form_section'>
                 <h1 className='heading'>Cryptocurrency <span className='highlight'>Checkout</span></h1>
                 <p className='bio'>Deposit a minimum of <span className='highlight'>$250</span> for our trading services.</p>
+            <div className='checkout_form'>
+                <input className="checkout-input" type="text" placeholder="Name"/>
+                <input className="checkout-input" type="email" placeholder="Email"/>
+                <input className="checkout-input" type="text" placeholder="Contact"/>
+                <input className="checkout-input" type="text" placeholder="$ Amount"/>
+                <select className="checkout-select">
+                <option value="">service</option>
+                <option value="MultiplX">MultiplX</option>
+                <option value="Earning Pool">Earning Pool</option>
+                </select>
+                <select className="checkout-select">
+                <option value="">Cryptocurrency</option>
+                <option value="Bitcoin">Bitcoin (BTC)</option>
+                <option value="Ethereum">Ethereum (ETH) </option>
+                <option value="Litecoin">Litecoin (LTC)</option>
+                <option value="Bitcoin Cash">Bitcoin Cash (BCH)</option>
+                <option value="USD Coin">USD Coin (USDC)</option>
+                <option value="Dai">Dai (DAI)</option>
+                </select>
+                <br></br>
+                <button>Depoist</button>
             </div>
+            </div>
+
 
         </div>
         <Footer></Footer>
