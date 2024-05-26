@@ -8,11 +8,11 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.blanks
-{
-    display: none;
-}
 
+.blank
+    {
+        display: none;
+    }
 
 .compoundCalculator_section
 {
@@ -75,11 +75,11 @@ input[type="number"] {
 @media only screen and (max-width: 768px) {
     
 
-    .blanks
+
+    .blank
     {
         display: block;
     }
-    
 
     .CompoundCalculator_box_layout
     {
@@ -95,7 +95,6 @@ input[type="number"] {
     .CompoundCalculator_box_layout
     {
         width: 92%;
-        height: auto;
         display: grid;
         align-items: center;
         row-gap: 1.2rem;

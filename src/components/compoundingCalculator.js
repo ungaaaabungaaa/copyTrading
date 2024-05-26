@@ -51,8 +51,8 @@ const CompoundingCalculator = () => {
 
       </div>
       <div className='compoundCalculator_section'>
-        <br className='blanks'></br>
-        <br className='blanks'></br>
+        <br className='blank'></br>
+        <br className='blank'></br>
         <label htmlFor="amount">Enter investment amount</label>
         <br></br>
         <input
