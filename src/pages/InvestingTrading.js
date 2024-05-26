@@ -59,7 +59,7 @@ function InvestingTrading()
                 <h1 className='heading'>Today's Profit</h1>
                 <br></br>
                 <br></br>
-                <h2>8.1 <span className='highlight'>%</span></h2>
+                <h4>8.1 <span className='highlight'>%</span></h4>
                 <p>Our advanced trading strategies generate consistent daily profits, <br></br> allowing you to grow your wealth over time.</p>
                 <button onClick={() => navigate('/checkout')}>Start Now</button>
             </div> 
