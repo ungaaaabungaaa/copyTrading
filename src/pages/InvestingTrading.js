@@ -7,10 +7,13 @@ import Lottie from 'react-lottie';
 import '../styles/hero2.css'
 import animationData from '../assets/Animations/invest.json';
 import animationData2 from '../assets/Animations/rocket.json';
+import { useNavigate } from 'react-router-dom';
+
 
 function InvestingTrading()
 {
 
+    const navigate = useNavigate(); // Initialize the useNavigate hook
     const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -38,7 +41,7 @@ function InvestingTrading()
             <div className='invest_title'>
                 <h1 className='heading'>Invest Daily, Earn Daily</h1>
                 <p className='bio'>Grow your wealth with our daily trading platform. Deposit <br></br> funds and watch your profits accumulate daily.</p>
-                <button>Get Started</button>
+                <button onClick={() => navigate('/checkout')}>Get Started</button>
             </div>
             <div className='invest_animation'>
                 <div className='containerStyle2'>
@@ -58,7 +61,7 @@ function InvestingTrading()
                 <br></br>
                 <h2>8.1 <span className='highlight'>%</span></h2>
                 <p>Our advanced trading strategies generate consistent daily profits, <br></br> allowing you to grow your wealth over time.</p>
-                <button>Start Now</button>
+                <button onClick={() => navigate('/checkout')}>Start Now</button>
             </div> 
         </div>
         <br className='blanks'></br>

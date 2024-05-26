@@ -8,12 +8,16 @@ import Lottie from 'react-lottie';
 import animationData from '../assets/Animations/compound.json';
 import animationData2 from '../assets/Animations/compound2.json';
 import CompoundingCalculator from '../components/compoundingCalculator';
-import '../styles/hero1.css'
+import '../styles/hero1.css';
+import { useNavigate } from 'react-router-dom';
 
 
 
-function compoundTrading()
+
+
+function CompoundTrading()
 {
+  const navigate = useNavigate(); // Initialize the useNavigate hook
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -50,7 +54,7 @@ function compoundTrading()
       <div className='containerStyle'>
         <Lottie options={defaultOptions}/>
       </div>
-      <button>Start Now</button>
+      <button onClick={() => navigate('/checkout')} >Start Now</button>
       <br></br>
       <br></br>
     </div>
@@ -60,4 +64,4 @@ function compoundTrading()
 }
 
 
-export default compoundTrading;
+export default CompoundTrading;
