@@ -46,9 +46,6 @@ function InvestingTrading()
                 </div>
             </div>
         </div>
-        <br></br>
-        <br></br>
-
         <div className='invest_section2'>
             <div className='invest_animation2'>
             <div className='containerStyle2'>
@@ -64,8 +61,8 @@ function InvestingTrading()
                 <button>Start Now</button>
             </div> 
         </div>
-        <br className='blanks' ></br>
-        <br className='blanks' ></br>
+        <br className='blanks'></br>
+        <br className='blanks'></br>
         <Footer></Footer>
         </>
     ); 

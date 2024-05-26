@@ -1,4 +1,4 @@
-.containerStyle2
+.containerStyle3
 {
     display: flex;
     flex-direction: column;
@@ -10,9 +10,9 @@
 /* Styles for mobile and tablet devices */
 @media only screen and (max-width: 768px) {
     
-    .containerStyle2
+    .containerStyle3
     {
-        width: 62%;
+        width: 82%;
     }
 
     
