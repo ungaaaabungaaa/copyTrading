@@ -9,6 +9,7 @@ import InvestingTrading from './pages/InvestingTrading';
 import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import Layout from './components/Layout';  // Import the Layout component
 
 import NotFoundPage from './pages/404page';
 import Checkout from './pages/Checkout';
@@ -17,6 +18,7 @@ import Dashboard from './pages/Dashboard';
 function AppRoutes() {
   return (
     <Router>
+      <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
@@ -31,6 +33,7 @@ function AppRoutes() {
         <Route path='/privacy' element={<Privacy />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      </Layout>
     </Router>
   );
 }
