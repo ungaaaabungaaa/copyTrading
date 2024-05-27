@@ -7,6 +7,7 @@ import Lottie from 'react-lottie';
 import animationData from '../assets/Animations/profile.json';
 import { useAuth } from '../contexts/AuthContext';
 import { db } from '../firebase';
+import '../styles/hero2.css'
 import { useNavigate } from 'react-router-dom';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
@@ -79,7 +80,7 @@ const Profile = () => {
       <Header />
       <div className="profile_section">
         <div>
-          <Lottie options={defaultOptions} style={{ width: '10vw' }} />
+          <Lottie options={defaultOptions} className='containerStyle2' />
         </div>
         <div className="profile_form_title">
           <h1>Complete your profile</h1>

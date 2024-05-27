@@ -44,15 +44,6 @@ function Checkout()
                 <option value="MultiplX">MultiplX</option>
                 <option value="Earning Pool">Earning Pool</option>
                 </select>
-                <select className="checkout-select">
-                <option value="">Cryptocurrency</option>
-                <option value="Bitcoin">Bitcoin (BTC)</option>
-                <option value="Ethereum">Ethereum (ETH) </option>
-                <option value="Litecoin">Litecoin (LTC)</option>
-                <option value="Bitcoin Cash">Bitcoin Cash (BCH)</option>
-                <option value="USD Coin">USD Coin (USDC)</option>
-                <option value="Dai">Dai (DAI)</option>
-                </select>
                 <br></br>
                 <button>Depoist</button>
             </div>
