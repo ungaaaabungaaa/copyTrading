@@ -17,20 +17,23 @@ const Header = () => {
     const handleDashboardClick = () => {
         if (currentUser) {
             navigate('/dashboard');
-        } 
+        } else
+        {
+            navigate('/signup');
+        }
     };
     
 
     const handleCompoundClick = () => {
-        if (currentUser) {
-            navigate('/compound');
-        } 
+       
+        navigate('/compound');
+        
     };
 
     const handleInvestingClick = () => {
-        if (currentUser) {
-            navigate('/investing');
-        } 
+        
+        navigate('/investing');
+    
     };
 
     return (
