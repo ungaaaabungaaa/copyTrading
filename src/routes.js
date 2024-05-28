@@ -14,6 +14,9 @@ import Layout from './components/Layout';  // Import the Layout component
 import NotFoundPage from './pages/404page';
 import Checkout from './pages/Checkout';
 import Dashboard from './pages/Dashboard';
+import Affiliate from './pages/Affiliate';
+import Faq from './pages/FAQ';
+import AboutUs from './pages/AboutUs';
 
 function AppRoutes() {
   return (
@@ -31,6 +34,9 @@ function AppRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/terms" element={<Terms />} />
         <Route path='/privacy' element={<Privacy />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path='/affiliate' element={<Affiliate />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       </Layout>

@@ -10,6 +10,9 @@ const Footer = () => {
                 <small>© 2024 CopyTrade. All rights reserved</small>
             </div>
             <div className='footer_links_section'>
+            <Link className='links' to="/faq">Faq</Link>
+            <Link className='links' to="/about">About</Link>
+            <Link className='links' to="/affiliate">Affiliate</Link>
             <Link className='links' to="/terms">Terms</Link>
             <Link className='links' to="/privacy">Privacy</Link>
             <Link className='links' to="/contact">Contact</Link>
