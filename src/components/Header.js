@@ -4,6 +4,10 @@ import { getAuth, signOut } from 'firebase/auth';
 import { useAuth } from '../contexts/AuthContext';
 
 const Header = () => {
+
+
+    // Add in Stock Tickers  main Four 
+
     const { currentUser } = useAuth();
     const navigate = useNavigate();
     const auth = getAuth();
@@ -25,15 +29,11 @@ const Header = () => {
     
 
     const handleCompoundClick = () => {
-       
         navigate('/compound');
-        
     };
 
     const handleInvestingClick = () => {
-        
         navigate('/investing');
-    
     };
 
     return (
