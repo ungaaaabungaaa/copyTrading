@@ -6,7 +6,6 @@ import Footer from '../components/footer';
 function Faq()
 {
     
-
     return (
         <>
         <Header></Header>

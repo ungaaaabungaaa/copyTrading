@@ -13,20 +13,24 @@ const Header = () => {
         navigate('/login');
     };
 
+
+    const handleDashboardClick = () => {
+        if (currentUser) {
+            navigate('/dashboard');
+        } 
+    };
+    
+
     const handleCompoundClick = () => {
         if (currentUser) {
             navigate('/compound');
-        } else {
-            navigate('/login');
-        }
+        } 
     };
 
     const handleInvestingClick = () => {
         if (currentUser) {
             navigate('/investing');
-        } else {
-            navigate('/login');
-        }
+        } 
     };
 
     return (
@@ -35,6 +39,7 @@ const Header = () => {
                 <h3>Trades<span className='highlight'>Hub</span></h3>
             </div>
             <div className='header_buttons'>
+                <button className='header_button' onClick={handleDashboardClick}>Dashboard</button>
                 <button className='header_button' onClick={handleCompoundClick}>MultiplX</button>
                 <button className='header_button' onClick={handleInvestingClick}>Earning Pool</button>
             </div>
