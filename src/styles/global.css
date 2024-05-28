@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     position: relative;
     color: white;
+    cursor: default;
 }
 
 ::-webkit-scrollbar {
