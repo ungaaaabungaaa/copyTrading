@@ -5,12 +5,14 @@ import Lottie from 'react-lottie';
 import animationData from '../assets/Animations/contact.json';
 import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
-import Footer from '../components/footer'
+import Footer from '../components/footer';
+import { useSnackbar } from '../components/Snackbar';
 
 
 function Contact()
 {
 
+    const showSnackbar = useSnackbar();
     const form = useRef();    
     function sendMail(e) {
         e.preventDefault();
@@ -20,20 +22,20 @@ function Contact()
         var message = document.getElementById("message").value.trim();
         // Validate form inputs
         if (name === "") {
-            alert("Please enter your name.");
+            showSnackbar('Please enter your name.');
             return;
         }
       
         if (email === "") {
-            alert("Please enter your email address.");
+            showSnackbar('Please enter your email address.');
             return;
         } else if (!isValidEmail(email)) {
-            alert("Please enter a valid email address.");
+            showSnackbar('Please enter a valid email address.');
             return;
         }
         
         if (message === "") {
-            alert("Please enter your message.");
+            showSnackbar('Please enter your message.');
             return;
         }
       
@@ -56,6 +58,7 @@ function Contact()
       .then(
         () => {
           console.log('SUCCESS!');
+          showSnackbar('SUCCESS! Logged IN');
           // Clear form fields and show thank you message
           document.getElementById("name").value = "";
           document.getElementById("email").value = "";
@@ -64,6 +67,7 @@ function Contact()
         (error) => {
           console.log('FAILED...', error.text);
           alert("There was an error sending your email. Please try again later.");
+          showSnackbar('here was an error sending your email. Please try again later.' + error.text);
         },
       );
 

@@ -16,11 +16,13 @@ import Checkout from './pages/Checkout';
 import Dashboard from './pages/Dashboard';
 import Affiliate from './pages/Affiliate';
 import Faq from './pages/FAQ';
+import SnackbarProvider from './components/Snackbar';
 import AboutUs from './pages/AboutUs';
 
 function AppRoutes() {
   return (
     <Router>
+      <SnackbarProvider>
       <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -40,6 +42,7 @@ function AppRoutes() {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       </Layout>
+      </SnackbarProvider>
     </Router>
   );
 }

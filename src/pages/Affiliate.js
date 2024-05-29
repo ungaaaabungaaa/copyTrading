@@ -44,8 +44,8 @@ function Affiliate()
                 </div>
             </div>
             <div className='titles_2'>
-                <h1>Earn from Referrals</h1>
-                <p>No deposit required. Earn commissions by sharing your unique referral link and promotional tools.</p>
+                <h1 className='heading'>Earn from Referrals</h1>
+                <p className='bio'>No deposit required. Earn commissions by sharing your unique referral link and promotional tools.</p>
                 <button>Join Now</button>
                 <div  className='containerStyle'>
                     <Lottie options={defaultOptions}/>

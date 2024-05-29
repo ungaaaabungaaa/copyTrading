@@ -3,11 +3,12 @@ import Footer from '../components/footer';
 import Header from '../components/Header'
 import '../styles/global.css';
 import '../styles/home.css';
-import Hero1 from '../components/hero1'
-import Hero2 from '../components/hero2'
-import Hero3 from '../components/hero3'
+import Hero1 from '../components/hero1';
+import Hero2 from '../components/hero2';
+import Hero3 from '../components/hero3';
+import { useSnackbar } from '../components/Snackbar';
 
-function home()
+function Home()
 {
     const handleButtonClick = () => {
       window.location.href = 'https://i.bybit.com/OabQq5O?action=inviteToCopy';
@@ -51,4 +52,4 @@ function home()
 }
 
 
-export default home;
+export default Home;

@@ -10,11 +10,12 @@ import { db } from '../firebase';
 import '../styles/hero2.css'
 import { useNavigate } from 'react-router-dom';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { useSnackbar } from '../components/Snackbar';
 
 const Profile = () => {
   const navigate = useNavigate();
   const { currentUser } = useAuth();
-
+  const showSnackbar = useSnackbar();
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -68,10 +69,9 @@ const Profile = () => {
         expertise: expertise,
         isComplete: true,
       });
-      console.log('Profile details successfully saved to Firestore!');
-      navigate('/'); // Redirect to a new page after profile completion
+      showSnackbar('Profile details successfully saved');
     } catch (error) {
-      console.error('Error saving profile details:', error);
+      showSnackbar('Error saving profile details:',error);
     }
   };
 
