@@ -22,3 +22,11 @@
     align-self: flex-end; /* Position amount in the bottom-right corner */
   }
   
+
+  /* Styles for mobile and tablet devices */
+@media only screen and (max-width: 768px) {
+  .list-container {
+    width: 80%; /* Set the width of the container */
+    margin: 0 auto; /* Center the container */
+  }
+}
