@@ -59,15 +59,17 @@ function Home()
       </div>
       <div className='hero_3'>
         <div className='hero_4_depoist'>
-            <h1>Last <span className='highlight'>Deposits</span></h1>
+            <h1 className='heading'>Last <span className='highlight'>Deposits</span></h1>
+            <p className='bio'>Explore our latest deposit opportunities and unlock your financial potential today </p>
             <List data={DepoistData} />
         </div>
         <div className='hero_4_animations'>
             <Hero4></Hero4>
-            <h1>Secured InvestMent <span className='highlight'>Plan</span></h1>
+            <h1 className='heading'>Secured InvestMent <span className='highlight'>Plan</span></h1>
+            <p className='bio'>Discover peace of mind with our secured investment plans, designed to safeguard your financial future</p>
         </div>
       </div>
-      
+
       <br/>
       <br/>
       <br/>
