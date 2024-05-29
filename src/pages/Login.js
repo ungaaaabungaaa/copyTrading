@@ -7,20 +7,23 @@ import '../styles/login.css';
 import Lottie from 'react-lottie';
 import { useNavigate } from 'react-router-dom';
 import animationData from '../assets/Animations/login.json';
+import { useSnackbar } from '../components/Snackbar';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate(); // Initialize the useNavigate hook
+  const showSnackbar = useSnackbar();
 
   
   const handleLogin = async () => {
     try {
       const auth = getAuth();
       await signInWithEmailAndPassword(auth, email, password);
+      showSnackbar('Please Check Your Profile Details');
       navigate('/profile'); 
     } catch (error) {
-      console.error('Error signing in:', error.message);
+      showSnackbar('Error signing in:',error.message);
     }
   };
 

@@ -7,10 +7,12 @@ import Header from '../components/Header'
 import Lottie from 'react-lottie';
 import { useNavigate } from 'react-router-dom';
 import animationData from '../assets/Animations/signup.json';
+import { useSnackbar } from '../components/Snackbar';
 
 function SignUp()
 {
 
+   const showSnackbar = useSnackbar();
    const navigate = useNavigate(); // Initialize the useNavigate hook
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
@@ -27,10 +29,12 @@ function SignUp()
      createUserWithEmailAndPassword(auth, email, password)
        .then((userCredential) => {
          // Signed up successfully
+         showSnackbar('Signed up successfully , Enter Your Details');
          navigate('/profile'); // Route to profile after sign up
        })
        .catch((error) => {
          setError(error.message);
+         showSnackbar('error',error.message);
        });
    };
 

@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/header.css'
 import { getAuth, signOut } from 'firebase/auth';
 import { useAuth } from '../contexts/AuthContext';
+import { useSnackbar } from '../components/Snackbar';
 
 const Header = () => {
 
@@ -11,10 +12,12 @@ const Header = () => {
     const { currentUser } = useAuth();
     const navigate = useNavigate();
     const auth = getAuth();
+    const showSnackbar = useSnackbar();
 
     const handleLogout = async () => {
         await signOut(auth);
         navigate('/login');
+        showSnackbar('logged Out !');
     };
 
 
