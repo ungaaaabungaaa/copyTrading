@@ -14,7 +14,7 @@ import { useSnackbar } from '../components/Snackbar';
 function Home()
 {
     const handleButtonClick = () => {
-      window.location.href = 'https://i.bybit.com/OabQq5O?action=inviteToCopy';
+      window.location.href = 'https://i.bybit.com/hKabvtK';
     };
 
     const DepoistData = [
