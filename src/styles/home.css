@@ -82,6 +82,78 @@
 }
 
 
+.hero_4
+{
+    width: 100vw;
+    height: 40vh;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 5% 1fr 3% 1fr 3% 1fr 3% 1fr 5%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.hero_4_card_1
+{
+    grid-column-start: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 1.2rem;
+    background-color: #2b2d31;
+}
+
+.hero_4_card_2
+{
+    grid-column-start: 4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    background-color: #2b2d31;
+}
+
+.hero_4_card_3
+{
+    grid-column-start: 6;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    background-color: #2b2d31;
+}
+
+.hero_4_card_4
+{
+    grid-column-start: 8;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    background-color: #2b2d31;
+}
+
+
+
+
+
+
+
+
+
+
 /* Styles for mobile and tablet devices */
 @media only screen and (max-width: 768px) {
     
@@ -177,4 +249,9 @@
         text-align: center;
     }
 
+
+    .hero_4
+    {
+        display: none;
+    }
 }

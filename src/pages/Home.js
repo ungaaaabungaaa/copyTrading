@@ -57,6 +57,25 @@ function Home()
         <button onClick={handleButtonClick} >Join In</button>
         <br></br>
       </div>
+      <div className='hero_4'>
+        <div className='hero_4_card_1'>
+          <h1>Daily Profit</h1>
+          <p>guarantee stable profit together with high return</p>
+        </div>
+        <div className='hero_4_card_2'>
+           <h1>Safe & Security</h1>
+           <p>powerful & Strong <br></br> DDOS Protection 24/7</p>
+        </div>
+        <div className='hero_4_card_3'>
+           <h1>SSL Certificate</h1>
+           <p>SSL establishing a secure connection while browsing</p>
+           
+        </div>
+        <div className='hero_4_card_4'>
+           <h1>Instant Pay</h1>
+           <p>processed instantly upon <br></br> request</p>
+        </div>
+      </div>
       <div className='hero_3'>
         <div className='hero_4_depoist'>
             <h1 className='heading'>Last <span className='highlight'>Deposits</span></h1>
