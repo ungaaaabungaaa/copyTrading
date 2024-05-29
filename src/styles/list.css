@@ -1,0 +1,24 @@
+.list-container {
+    width: 60%; /* Set the width of the container */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .name {
+    align-self: flex-start; /* Position name in the top-left corner */
+  }
+  
+  .amount {
+    align-self: flex-end; /* Position amount in the bottom-right corner */
+  }
+  

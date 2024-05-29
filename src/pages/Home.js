@@ -6,6 +6,9 @@ import '../styles/home.css';
 import Hero1 from '../components/hero1';
 import Hero2 from '../components/hero2';
 import Hero3 from '../components/hero3';
+import Hero4 from '../components/hero4';
+import List from '../components/list';
+
 import { useSnackbar } from '../components/Snackbar';
 
 function Home()
@@ -13,6 +16,19 @@ function Home()
     const handleButtonClick = () => {
       window.location.href = 'https://i.bybit.com/OabQq5O?action=inviteToCopy';
     };
+
+    const DepoistData = [
+      { name: 'Aarav Patel', amount: Math.floor(Math.random() * 1000) },
+      { name: 'Neha Gupta', amount: Math.floor(Math.random() * 1000) },
+      { name: 'Vivek Sharma', amount: Math.floor(Math.random() * 1000) },
+      { name: 'Ishaan Kumar', amount: Math.floor(Math.random() * 1000) },
+      { name: 'Ananya Singh', amount: Math.floor(Math.random() * 1000) },
+      { name: 'Advik Jain', amount: Math.floor(Math.random() * 1000) },
+      { name: 'Diya Trivedi', amount: Math.floor(Math.random() * 1000) },
+      { name: 'Aryan Desai', amount: Math.floor(Math.random() * 1000) },
+      { name: 'Riya Reddy', amount: Math.floor(Math.random() * 1000) },
+      { name: 'Kabir Chatterjee', amount: Math.floor(Math.random() * 1000) }
+    ];
 
     return (
       <>
@@ -41,6 +57,16 @@ function Home()
         <p className='bio'>Join our community of successful traders and start <br /> growing your <span className='highlight'>wealth</span> with our copy trading platform.</p>
         <button onClick={handleButtonClick} >Join In</button>
         <br></br>
+      </div>
+      <div className='hero_3'>
+        <div className='hero_4_depoist'>
+            <h1>Last <span className='highlight'>Deposits</span></h1>
+            <List data={DepoistData} />
+        </div>
+        <div className='hero_4_animations'>
+            <Hero4></Hero4>
+            <h1>Secured InvestMent <span className='highlight'>Plan</span></h1>
+        </div>
       </div>
       <br/>
       <br/>

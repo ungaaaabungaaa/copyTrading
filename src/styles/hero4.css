@@ -1,0 +1,19 @@
+.containerStyle4
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 42%;
+}
+
+/* Styles for mobile and tablet devices */
+@media only screen and (max-width: 768px) {
+    
+    .containerStyle4
+    {
+        width: 52%;
+    }
+
+    
+}

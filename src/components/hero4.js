@@ -1,9 +1,9 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import animationData from '../assets/Animations/hero3.json';
-import '../styles/hero1.css';
+import animationData from '../assets/Animations/hero4.json';
+import '../styles/hero4.css';
 
-const Hero3 = () => {
+const Hero4 = () => {
   
     const defaultOptions = {
     loop: true,
@@ -16,11 +16,11 @@ const Hero3 = () => {
 
     return (
     <>
-    <div className='containerStyle'>
+    <div className='containerStyle4'>
       <Lottie options={defaultOptions}/>
     </div>
     </>
   );
 };
 
-export default Hero3;
+export default Hero4;
