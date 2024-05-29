@@ -8,7 +8,6 @@ import Hero2 from '../components/hero2';
 import Hero3 from '../components/hero3';
 import Hero4 from '../components/hero4';
 import List from '../components/list';
-
 import { useSnackbar } from '../components/Snackbar';
 
 function Home()
