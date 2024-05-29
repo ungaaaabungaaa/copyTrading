@@ -76,8 +76,6 @@ const CompoundingCalculator = () => {
         <button onClick={calculateReturns}>Calculate Returns</button>
         <br></br>
       </div>
-     
-
     </>
   );
 };
