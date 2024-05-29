@@ -67,6 +67,7 @@ function Home()
             <h1>Secured InvestMent <span className='highlight'>Plan</span></h1>
         </div>
       </div>
+      
       <br/>
       <br/>
       <br/>

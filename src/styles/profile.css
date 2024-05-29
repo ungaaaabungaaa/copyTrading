@@ -59,6 +59,11 @@ select
     margin-top: 2.1%;
     appearance: none; /* Hides the default arrow */
 }
+/* Styles for select options */
+select option {
+    background-color: #0b0b15; /* Change background color of options to purple */
+    color: white; /* Change text color of options to white */
+}
 
 .submit_button
 {
