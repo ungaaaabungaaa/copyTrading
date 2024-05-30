@@ -20,8 +20,7 @@ function Login() {
     try {
       const auth = getAuth();
       await signInWithEmailAndPassword(auth, email, password);
-      showSnackbar('Please Check Your Profile Details');
-      navigate('/profile'); 
+      navigate('/'); 
     } catch (error) {
       showSnackbar('Error signing in:',error.message);
     }

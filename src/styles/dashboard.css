@@ -1,0 +1,41 @@
+.dashboard
+{
+    width: 100vw;
+    height: 140vh;
+    margin-top: 2.1%;
+    margin-bottom: 2.1%;
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-rows: 35% 45% 20%;
+}
+
+.dashboard_hero
+{
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+}
+
+
+
+.Referral_Program
+{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: start;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Referral_Program_box
+{
+    border: solid 1px ;
+    padding: 2.1%;
+    border-radius: 1.2rem;
+}

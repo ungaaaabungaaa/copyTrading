@@ -1,8 +1,10 @@
-import React, { useContext, useState, useEffect } from 'react';
+// AuthContext.js
+import React, { useContext, useState, useEffect, createContext } from 'react';
 import { auth, db } from '../firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
 
-const AuthContext = React.createContext();
+const AuthContext = createContext();
 
 export const useAuth = () => {
   return useContext(AuthContext);
@@ -10,33 +12,27 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [profileComplete, setProfileComplete] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(async user => {
-      setCurrentUser(user);
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
-        try {
-          const docRef = doc(db, 'profiles', user.uid);
-          const docSnapshot = await getDoc(docRef);
-          if (docSnapshot.exists() && docSnapshot.data().isComplete) {
-            setProfileComplete(true);
-            console.log("profile found");
-          
-          } else {
-            setProfileComplete(false);
-            console.log("profile not found");
-          }
-        } catch (error) {
-          console.error('Error fetching user profile:', error);
+        const docRef = doc(db, 'profiles', user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const profileData = docSnap.data();
+          setProfileComplete(profileData.isComplete || false);
+        } else {
           setProfileComplete(false);
         }
       } else {
         setProfileComplete(false);
       }
+      setCurrentUser(user);
       setLoading(false);
     });
+
     return unsubscribe;
   }, []);
 

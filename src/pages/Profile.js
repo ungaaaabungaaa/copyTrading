@@ -1,3 +1,4 @@
+// Profile.js
 import React, { useState, useEffect } from 'react';
 import '../styles/global.css';
 import '../styles/profile.css';
@@ -70,8 +71,9 @@ const Profile = () => {
         isComplete: true,
       });
       showSnackbar('Profile details successfully saved');
+      navigate('/'); // Navigate to home or dashboard after successful update
     } catch (error) {
-      showSnackbar('Error saving profile details:',error);
+      showSnackbar('Error saving profile details:', error);
     }
   };
 
