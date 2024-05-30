@@ -69,6 +69,10 @@ const Profile = () => {
         country: country,
         expertise: expertise,
         isComplete: true,
+        totalMoney: 0,
+        depositAmount: 0,
+        profit: 0,
+        depositDate: 'N?A',
       });
       showSnackbar('Profile details successfully saved');
       navigate('/'); // Navigate to home or dashboard after successful update
