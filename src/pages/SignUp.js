@@ -83,7 +83,7 @@ function SignUp() {
           </p>
           <br />
           <div className="login_form">
-            <input type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)} className="signUp_input" />
+            <input autocomplete="email" type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)} className="signUp_input" />
             <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} className="signUp_input"/>
             <input type="password" placeholder="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)} className="signUp_input"/>
             <br />
