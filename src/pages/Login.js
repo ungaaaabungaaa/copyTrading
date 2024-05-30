@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'; // Import Firebase authentication functions
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'; // Import Firebase authentication functions
 import '../styles/global.css';
 import Footer from '../components/footer';
 import Header from '../components/Header';
@@ -15,14 +15,24 @@ function Login() {
   const navigate = useNavigate(); // Initialize the useNavigate hook
   const showSnackbar = useSnackbar();
 
-  
   const handleLogin = async () => {
     try {
       const auth = getAuth();
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/'); 
     } catch (error) {
-      showSnackbar('Error signing in:',error.message);
+      showSnackbar('Error signing in:', error.message);
+    }
+  };
+
+  const handleGoogleSignIn = async () => {
+    try {
+      const auth = getAuth();
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      navigate('/'); 
+    } catch (error) {
+      showSnackbar('Error signing in with Google:', error.message);
     }
   };
 
@@ -67,6 +77,10 @@ function Login() {
             <br />
             <button className="login_btn" onClick={handleLogin}>
               Login
+            </button>
+            <p>Or</p>
+            <button className="login_btn" onClick={handleGoogleSignIn}>
+              Sign In with Google
             </button>
             <br />
             <p>
