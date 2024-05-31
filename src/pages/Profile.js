@@ -9,7 +9,6 @@ import animationData from '../assets/Animations/profile.json';
 import { useAuth } from '../contexts/AuthContext';
 import { db } from '../firebase';
 import '../styles/hero2.css';
-
 import { useNavigate } from 'react-router-dom';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { useSnackbar } from '../components/Snackbar';
