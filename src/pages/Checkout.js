@@ -25,8 +25,7 @@ function Checkout() {
     const ETH = '0x9dacAE246Ec02dd580C7620489A1729c3896f9a1';
     const XRP = 'rJPWTdgsenS1MhjBs8oC5RestwZCRUcQf7';
     const USDT = 'TGVqEUdhmsLbetDpjUpgSutkAu8AH1QfE7';
-
-    const { showSnackbar } = useSnackbar();
+    const showSnackbar = useSnackbar();
 
     const handleWalletChange = (event) => {
         const selectedOption = event.target.value;
