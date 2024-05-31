@@ -16,7 +16,7 @@ function Verfication()
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice'
         }
-        };
+      };
 
     return (
         <>

@@ -68,6 +68,7 @@
     margin-top: 1.2%;
     margin-bottom: 1.2%;
     width: 100%;
+    overflow: hidden;
     height: auto;
     display: flex;
     align-items: center;
