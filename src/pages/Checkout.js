@@ -77,9 +77,6 @@ function Checkout() {
                     <h1 className='heading'>Cryptocurrency <span className='highlight'>Checkout</span></h1>
                     <p className='bio'>Deposit a minimum of <span className='highlight'>$250</span> for our trading services.</p>
                     <div className='checkout_form'>
-                        <input className="checkout-input" type="text" placeholder="Name" />
-                        <input className="checkout-input" type="email" placeholder="Email" />
-                        <input className="checkout-input" type="text" placeholder="Contact" />
                         <input className="checkout-input" type="text" placeholder="$ Amount" />
                         <select className="checkout-select">
                             <option value="">Service</option>
