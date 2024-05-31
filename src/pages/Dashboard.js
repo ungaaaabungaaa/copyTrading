@@ -88,7 +88,7 @@ function Dashboard() {
                 <div className='Referral_Program'>
                     <h1 className='heading'>Referral <span className='highlight'>Program</span></h1>
                     <p className='bio'>Earn rewards for referring new traders to our platform. Share your unique referral link and get a commission for every new trader that signs up</p>
-                    <p className='Referral_Program_box'>https://copytrading.com/ref/johndoe</p>
+                    <p className='Referral_Program_box'>https://tradeshub.com/ref/test</p>
                 </div>
             </div>
             <Footer />

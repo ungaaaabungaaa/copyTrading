@@ -65,6 +65,8 @@
     grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 2;
+    margin-top: 1.2%;
+    margin-bottom: 1.2%;
     width: 100%;
     height: auto;
     display: flex;
