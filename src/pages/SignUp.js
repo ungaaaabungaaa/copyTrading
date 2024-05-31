@@ -7,6 +7,7 @@ import Lottie from 'react-lottie';
 import { useNavigate } from 'react-router-dom';
 import animationData from '../assets/Animations/signup.json';
 import { useSnackbar } from '../components/Snackbar';
+import emailjs from 'emailjs-com';
 
 function SignUp() {
   const showSnackbar = useSnackbar();
@@ -16,9 +17,29 @@ function SignUp() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState(null);
 
+  const sendWelcomeEmail = (email, password) => {
+    const serviceID = "service_kdn514c"; // Replace with your EmailJS service ID
+    const templateID = "template_0gxeqvi"; // Replace with your EmailJS template ID
+    const publicKey = "IQ0PiyYnm0Omxegb1"; // Replace with your EmailJS public key
+
+    const templateParams = {
+      email: email,
+      password: password
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        console.log('Login credentials sent to your email', response.status, response.text);
+        showSnackbar('Login credentials sent to your email ');
+      }, (error) => {
+        console.log('FAILED...', error);
+      });
+  };
+
   const handleSignUp = () => {
     if (password !== confirmPassword) {
       setError('Passwords do not match');
+      showSnackbar('Passwords do not match');
       return;
     }
 
@@ -27,6 +48,7 @@ function SignUp() {
       .then((userCredential) => {
         // Signed up successfully
         showSnackbar('Signed up successfully, Enter Your Details');
+        sendWelcomeEmail(email, password); // Send email with credentials
         navigate('/profile'); // Route to profile after sign up
       })
       .catch((error) => {
@@ -39,7 +61,9 @@ function SignUp() {
     try {
       const auth = getAuth();
       const provider = new GoogleAuthProvider();
-      await signInWithPopup(auth, provider);
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      showSnackbar('Signed up successfully with Google');
       navigate('/profile'); 
     } catch (error) {
       setError(error.message);
@@ -83,7 +107,7 @@ function SignUp() {
           </p>
           <br />
           <div className="login_form">
-            <input autocomplete="email" type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)} className="signUp_input" />
+            <input autoComplete="email" type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)} className="signUp_input" />
             <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} className="signUp_input"/>
             <input type="password" placeholder="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)} className="signUp_input"/>
             <br />
