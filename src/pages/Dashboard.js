@@ -6,7 +6,10 @@ import { format } from 'date-fns';
 import { useAuth } from '../contexts/AuthContext';
 import { db } from '../firebase';
 import { doc, getDoc } from 'firebase/firestore';
+import Lottie from 'react-lottie';
+import animationData from '../assets/Animations/dashboard.json';
 import { useSnackbar } from '../components/Snackbar';
+import '../styles/hero3.css';
 
 function Dashboard() {
     // Get the current date
@@ -23,6 +26,16 @@ function Dashboard() {
     const [profit, setProfit] = useState(0);
     const [depositDate, setDepositDate] = useState('N/A');
     const [profitDate, setProfitDate] = useState('N/A');
+
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+
 
     useEffect(() => {
         const fetchProfile = async () => {
@@ -63,6 +76,12 @@ function Dashboard() {
                         <p>Profit</p>
                         <h1 className='highlight'>${profit.toFixed(2)}</h1>
                         <p>Profit since {formattedDate}</p>
+                    </div>
+                </div>
+
+                <div className='leaderboard'>
+                    <div className='containerStyle3'>
+                        <Lottie options={defaultOptions} />
                     </div>
                 </div>
                 

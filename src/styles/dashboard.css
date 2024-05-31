@@ -60,7 +60,17 @@
     flex-direction: column;
 }
 
-
+.leaderboard
+{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
