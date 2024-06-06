@@ -13,8 +13,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-
-
 function CompoundTrading()
 {
   const navigate = useNavigate(); // Initialize the useNavigate hook

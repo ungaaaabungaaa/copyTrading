@@ -6,7 +6,6 @@ import { format } from 'date-fns';
 import { useAuth } from '../contexts/AuthContext';
 import { db } from '../firebase';
 import { doc, getDoc } from 'firebase/firestore';
-import Lottie from 'react-lottie';
 import animationData from '../assets/Animations/dashboard.json';
 import { useSnackbar } from '../components/Snackbar';
 import '../styles/hero3.css';
@@ -80,9 +79,7 @@ function Dashboard() {
                 </div>
 
                 <div className='leaderboard'>
-                    <div className='containerStyle3'>
-                        <Lottie options={defaultOptions} />
-                    </div>
+                    <p>Hello hash change</p>
                 </div>
                 
                 <div className='Referral_Program'>

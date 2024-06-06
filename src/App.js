@@ -16,7 +16,6 @@ function App() {
 
   return (
     <AuthProvider>
-      
       {loading ? <SplashScreen /> : <Routes />}
     </AuthProvider>
   );
