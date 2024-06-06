@@ -44,12 +44,12 @@ function CompoundTrading()
 
     
     <div className='compoundTrading_Animation_Section'>
+    <h1 className='heading'>Compound Trading <span className='highlight' > MultiplX </span> </h1>
+      <p className='bio'>Maximize your investment potential with our Compound Trading  Try it now and see how <br/> your investments can <span className='highlight' >grow exponentially!</span></p>
       <div className='containerStyle2'>
           <Lottie options={defaultOptions2}/>
       </div>
-      <h1 className='heading'>Compound Trading <span className='highlight' > MultiplX </span> </h1>
-      <p className='bio'>Maximize your investment potential with our Compound Trading  Try it now and see how <br/> your investments can <span className='highlight' >grow exponentially!</span></p>
-      <br className='blanks'></br>
+      <br></br>
       <button onClick={() => navigate('/checkout')} >Start Now</button>
     </div>
 
