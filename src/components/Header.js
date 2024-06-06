@@ -3,11 +3,12 @@ import '../styles/header.css'
 import { getAuth, signOut } from 'firebase/auth';
 import { useAuth } from '../contexts/AuthContext';
 import { useSnackbar } from '../components/Snackbar';
+import Ticker from '../components/Ticker';
 
 const Header = () => {
 
 
-    // Add in Stock Tickers  main Four 
+ 
 
     const { currentUser } = useAuth();
     const navigate = useNavigate();
@@ -40,10 +41,14 @@ const Header = () => {
     };
 
     return (
+        <>
+       
+        <Ticker></Ticker>
         <div className='header_section'>
             <div className='Header_logo' onClick={() => navigate('/')}>
                 <h3>Trades<span className='highlight'>Hub</span></h3>
             </div>
+            
             <div className='header_buttons'>
                 <button className='header_button' onClick={handleDashboardClick}>Dashboard</button>
                 <button className='header_button' onClick={handleCompoundClick}>MultiplX</button>
@@ -65,6 +70,7 @@ const Header = () => {
                 )}
             </div>
         </div>
+        </>
     );
 };
 

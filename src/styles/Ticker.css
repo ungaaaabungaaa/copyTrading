@@ -1,0 +1,13 @@
+.ticker {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .ticker-item {
+    margin-left: 1.1%;
+  }
