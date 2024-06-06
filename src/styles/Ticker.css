@@ -10,4 +10,16 @@
   
   .ticker-item {
     margin-left: 1.1%;
-  }
+}
+
+/* Styles for mobile and tablet devices */
+@media only screen and (max-width: 768px) {
+    .ticker {
+        display: none;
+      }
+      
+      .ticker-item {
+       display: none;
+    }
+     
+}
