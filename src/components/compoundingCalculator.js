@@ -1,82 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/compoundingCalculator.css';
 
 const CompoundingCalculator = () => {
-  const [amount, setAmount] = useState('');
-  const [duration, setDuration] = useState('');
-  const [compoundedReturns, setCompoundedReturns] = useState(0);
-  const [totalAmount, setTotalAmount] = useState(0);
+  const [amount, setAmount] = useState(250);
+  const [months, setMonths] = useState(1);
+  const [earned, setEarned] = useState(250);
+  const [compoundInterest, setCompoundInterest] = useState(0);
 
-  const handleAmountChange = (event) => {
-    setAmount(event.target.value);
+  useEffect(() => {
+    calculate();
+  }, [amount, months]);
+
+  const calculate = () => {
+    let earnedValue = amount;
+    for (let i = 0; i < months; i++) {
+      earnedValue += earnedValue * 0.10; // 10% growth
+    }
+    const compoundInterestValue = ((earnedValue - amount) / amount) * 100;
+    setEarned(earnedValue);
+    setCompoundInterest(compoundInterestValue);
   };
 
-  const handleDurationChange = (event) => {
-    setDuration(event.target.value);
+  const handleAmountChange = (e) => {
+    setAmount(parseInt(e.target.value));
   };
 
-  const calculateReturns = () => {
-    const initialAmount = parseFloat(amount);
-    const durationInYears = parseFloat(duration); // Assuming duration is in months
-    const annualInterestRate = 0.1; // 10% interest rate
-    const compoundedReturns = initialAmount * Math.pow(1 + annualInterestRate, durationInYears) - initialAmount;
-    const totalAmount = initialAmount + compoundedReturns;
-    setCompoundedReturns(compoundedReturns.toFixed(2));
-    setTotalAmount(totalAmount.toFixed(2));
+  const handleMonthsChange = (e) => {
+    setMonths(parseInt(e.target.value));
   };
 
   return (
-    <>
-     <div className='CompoundCalculator_box_layout'>
-            <div className='box1'>
-                <br></br>
-                <br></br>
-                <p>Initial Investment <br></br> <br></br> ${amount}</p>
-                <br></br>
-            </div>
-            <div className='box2'>
-                <br></br>
-                <br></br>
-                <p>Compounded Returns <br></br> <br></br> ${compoundedReturns}</p>
-                <br></br>
-                <br></br>
-            </div>
-            <div className='box3'>
-                <br></br>
-                <br></br>
-                <p>Total Amount <br></br> <br></br> ${totalAmount}</p>
-                <br></br>
-                <br></br>
-            </div>
-
+    <div className="Growth-Calculator flex_center_center flex_dir_col">
+      <div className="Growth-title flex_center_center">
+        <h1>Growth <span className="highlight">Calculator</span></h1>
       </div>
-      <div className='compoundCalculator_section'>
-        <br className='blank'></br>
-        <br className='blank'></br>
-        <label htmlFor="amount">Enter investment amount</label>
-        <br></br>
+      <br />
+      <div className='slider_layout'>
+        <span id="amountDisplay">${amount}</span>
         <input
-          className='CompoundCalculator_Input'
-          type="number"
+          type="range"
           id="amount"
-          placeholder='i.e 200$'
+          min="250"
+          max="10000"
+          step="250"
           value={amount}
           onChange={handleAmountChange}
         />
-        <select className='CompoundCalculator_Input' id="duration" value={duration} onChange={handleDurationChange}>
-          <option value="">Select duration</option>
-          <option value="3">3 months</option>
-          <option value="6">6 months</option>
-          <option value="12">1 year</option>
-          <option value="18">1.5 years</option>
-          <option value="24">2 years</option>
-          <option value="36">3 years</option>
-        </select>
-        <br></br>
-        <button onClick={calculateReturns}>Calculate Returns</button>
-        <br></br>
       </div>
-    </>
+      <br />
+      <div className='slider_layout'>
+        <span id="monthsDisplay">{months} {months === 1 ? 'month' : 'months'}</span>
+        <input
+          type="range"
+          id="months"
+          min="1"
+          max="36"
+          value={months}
+          onChange={handleMonthsChange}
+        />
+      </div>
+      <br /><br />
+      <div className="flex_center_center flex_dir_row">
+        <h1 id="earnedDisplay">${earned.toFixed(2)}</h1>
+        &nbsp;&nbsp;
+        <span className="highlight" id="interestDisplay">↑{compoundInterest.toFixed(2)}%</span>
+      </div>
+      <button id="CopyTrading">Start Now</button>
+      <p id="learn_more">Unlock exponential growth with Compound Trading. <br></br> Try it now to maximize your investment potential!</p>
+      <br />
+    </div>
   );
 };
 
