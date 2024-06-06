@@ -9,6 +9,7 @@ import Hero3 from '../components/hero3';
 import Hero4 from '../components/hero4';
 import List from '../components/list';
 import { useSnackbar } from '../components/Snackbar';
+import '../styles/icons.css';
 
 function Home()
 {
@@ -59,19 +60,23 @@ function Home()
       </div>
       <div className='hero_4'>
         <div className='hero_4_card_1'>
+          <span class="mdi--clock-outline"></span>
           <h1>Daily Profit</h1>
           <p>guarantee stable profit together with high return</p>
         </div>
         <div className='hero_4_card_2'>
+          <span class="ic--baseline-lock"></span>
            <h1>Safe & Security</h1>
            <p>powerful & Strong <br></br> DDOS Protection 24/7</p>
         </div>
         <div className='hero_4_card_3'>
+           <span class="fluent--certificate-24-filled"></span>
            <h1>SSL Certificate</h1>
            <p>SSL establishing a secure connection while browsing</p>
            
         </div>
         <div className='hero_4_card_4'>
+          <span class="icon-park-solid--flash-payment"></span>
            <h1>Instant Pay</h1>
            <p>processed instantly upon <br></br> request</p>
         </div>
