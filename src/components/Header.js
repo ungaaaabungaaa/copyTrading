@@ -40,6 +40,11 @@ const Header = () => {
         navigate('/investing');
     };
 
+    const handleWeb3Click = () => {
+        window.location.href = 'https://www.google.com';
+    };
+
+
     return (
         <>
        
@@ -53,6 +58,7 @@ const Header = () => {
                 <button className='header_button' onClick={handleDashboardClick}>Dashboard</button>
                 <button className='header_button' onClick={handleCompoundClick}>MultiplX</button>
                 <button className='header_button' onClick={handleInvestingClick}>Earning Pool</button>
+                <button className='header_button' onClick={handleWeb3Click}>Web3</button>
             </div>
             <div className='header_login'>
                 {currentUser ? (
