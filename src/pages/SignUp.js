@@ -27,7 +27,7 @@ function SignUp() {
     const publicKey = "IQ0PiyYnm0Omxegb1";
   
     const templateParams = {
-      to_email: email, // Change this line
+      to_email: email, // Make sure this matches the expected parameter in your EmailJS template
       otp: otp
     };
   
