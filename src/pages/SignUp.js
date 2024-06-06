@@ -17,22 +17,29 @@ function SignUp() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState(null);
 
-  const sendWelcomeEmail = (email, password) => {
-    const serviceID = "service_kdn514c"; // Replace with your EmailJS service ID
-    const templateID = "template_0gxeqvi"; // Replace with your EmailJS template ID
-    const publicKey = "IQ0PiyYnm0Omxegb1"; // Replace with your EmailJS public key
+  const generateOTP = () => {
+    return Math.floor(100000 + Math.random() * 900000);
+  };
 
+  const sendOTPEmail = (email, otp, password) => {
+    const serviceID = "service_kdn514c";
+    const templateID = "template_9kk5dsc";
+    const publicKey = "IQ0PiyYnm0Omxegb1";
+  
     const templateParams = {
-      email: email,
-      password: password
+      to_email: email, // Change this line
+      otp: otp
     };
-
+  
     emailjs.send(serviceID, templateID, templateParams, publicKey)
       .then((response) => {
-        console.log('Login credentials sent to your email', response.status, response.text);
-        showSnackbar('Login credentials sent to your email ');
+        console.log('OTP sent to your email', response.status, response.text);
+        showSnackbar('OTP sent to your email');
+        navigate('/otp', { state: { email, otp, password } });
       }, (error) => {
         console.log('FAILED...', error);
+        setError(error.message);
+        showSnackbar('Error', error.message);
       });
   };
 
@@ -45,18 +52,8 @@ function SignUp() {
       return;
     }
 
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed up successfully
-        showSnackbar('Signed up successfully, Enter Your Details');
-        sendWelcomeEmail(email, password); // Send email with credentials
-        navigate('/profile'); // Route to profile after sign up
-      })
-      .catch((error) => {
-        setError(error.message);
-        showSnackbar('Error:', error.message);
-      });
+  const otp = generateOTP();
+    sendOTPEmail(email, otp, password);
   };
 
   const handleGoogleSignUp = async () => {

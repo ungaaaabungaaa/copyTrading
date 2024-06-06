@@ -18,6 +18,7 @@ import Affiliate from './pages/Affiliate';
 import Faq from './pages/FAQ';
 import SnackbarProvider from './components/Snackbar';
 import AboutUs from './pages/AboutUs';
+import Otp from './pages/Otp';
 
 function AppRoutes() {
   return (
@@ -39,6 +40,7 @@ function AppRoutes() {
             <Route path="/faq" element={<Faq />} />
             <Route path="/verification" element={<Verfication />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/otp" element={<Otp />} />
             <Route path="/affiliate" element={<Affiliate />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
