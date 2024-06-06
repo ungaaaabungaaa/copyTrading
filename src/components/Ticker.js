@@ -9,8 +9,8 @@ const Ticker = () => {
   useEffect(() => {
     const fetchPrices = async () => {
       try {
-        const btcResponse = await axios.get('/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
-        const ethResponse = await axios.get('/api/v3/simple/price?ids=ethereum&vs_currencies=usd');
+        const btcResponse = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const ethResponse = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd');
         setBtcPrice(btcResponse.data.bitcoin.usd);
         setEthPrice(ethResponse.data.ethereum.usd);
       } catch (error) {
