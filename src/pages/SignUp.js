@@ -36,6 +36,8 @@ function SignUp() {
       });
   };
 
+  
+
   const handleSignUp = () => {
     if (password !== confirmPassword) {
       setError('Passwords do not match');
@@ -68,6 +70,12 @@ function SignUp() {
     } catch (error) {
       setError(error.message);
       showSnackbar('Error signing up with Google:', error.message);
+    }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSignUp();
     }
   };
 
@@ -107,9 +115,9 @@ function SignUp() {
           </p>
           <br />
           <div className="login_form">
-            <input autoComplete="email" type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)} className="signUp_input" />
-            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} className="signUp_input"/>
-            <input type="password" placeholder="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)} className="signUp_input"/>
+            <input autoComplete="email" type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)} className="signUp_input" onKeyDown={handleKeyDown} />
+            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} className="signUp_input" onKeyDown={handleKeyDown} />
+            <input type="password" placeholder="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)} className="signUp_input" onKeyDown={handleKeyDown}/>
             <br />
             <button onClick={handleSignUp} className="signUp_btn">
               Signup

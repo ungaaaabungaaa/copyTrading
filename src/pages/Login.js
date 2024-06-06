@@ -36,6 +36,13 @@ function Login() {
     }
   };
 
+  const handleKeyDown = (event) => {
+      if (event.key === 'Enter') {
+        handleLogin();
+      }
+    };
+
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -72,8 +79,8 @@ function Login() {
           </p>
           <br />
           <div className="login_form">
-            <input autocomplete="email" type="text" placeholder="Email" className="login_input" onChange={(e) => setEmail(e.target.value)} />
-            <input type="password" placeholder="Password" className="login_input" onChange={(e) => setPassword(e.target.value)} />
+            <input autocomplete="email" type="text" placeholder="Email" className="login_input" onChange={(e) => setEmail(e.target.value)} onKeyDown={handleKeyDown} />
+            <input type="password" placeholder="Password" className="login_input" onChange={(e) => setPassword(e.target.value)} onKeyDown={handleKeyDown} />
             <br />
             <button className="login_btn" onClick={handleLogin}>
               Login
