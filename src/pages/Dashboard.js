@@ -9,11 +9,15 @@ import { db } from '../firebase';
 import { format } from 'date-fns';
 import { doc, getDoc } from 'firebase/firestore';
 import { useSnackbar } from '../components/Snackbar';
+import DoughnutChart from '../components/DoughnutChart';
 
 
 
 function Dashboard() {
 
+
+    const deposit = 200;
+    const profits = 23.2;
 
     // Get the current date
     const today = new Date();
@@ -55,13 +59,6 @@ function Dashboard() {
     }, [currentUser]);
 
     
-
-
-    
-
-   
-
-   
     return (
         <>
             <Header />
@@ -85,7 +82,9 @@ function Dashboard() {
                         </div>
                     </div>
                 </div>
-                <div class="Profits"></div>
+                <div class="Profits">
+                    <DoughnutChart deposit={deposit} profit={profits} />
+                </div>
                 <div class="Daily-Profits">
                     <h4>{DailyProfits}<span className='highlight'>%</span></h4>
                     <h1>Daily Profit's </h1>
