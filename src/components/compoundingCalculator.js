@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/compoundingCalculator.css';
+import { useNavigate } from 'react-router-dom';
 
 const CompoundingCalculator = () => {
+  const navigate = useNavigate(); // Initialize the useNavigate hook
   const [amount, setAmount] = useState(250);
   const [months, setMonths] = useState(1);
   const [earned, setEarned] = useState(250);
@@ -65,7 +67,7 @@ const CompoundingCalculator = () => {
         &nbsp;&nbsp;
         <span className="highlight" id="interestDisplay">↑{compoundInterest.toFixed(2)}%</span>
       </div>
-      <button id="CopyTrading">Start Now</button>
+      <button onClick={() => navigate('/checkout')} id="CopyTrading">Start Now</button>
       <p id="learn_more">Unlock exponential growth with Compound Trading. <br></br> Try it now to maximize your investment potential!</p>
       <br />
     </div>

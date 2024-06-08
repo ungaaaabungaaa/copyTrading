@@ -1,8 +1,8 @@
 .container {  display: grid;
     width: 100vw;
-    height: 160vh;
+    height: 145vh;
     grid-template-columns: 5% 30% 30% 30% 5%;
-    grid-template-rows: 45% 35% 20%;
+    grid-template-rows: 40% 40% 20%;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -16,8 +16,49 @@
     grid-area: My-Money;
     width: 100%;
     height: 100%;
-   
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .userdata
+  {
+    width: 100%;
+    height: 92%;
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    border-radius: 2.2rem;
+    background-color: #2b2d31;
+  }
+
+  .dashboard_card_1
+  {
+    grid-column-start: 2;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
+  .dashboard_card_2
+  {
+    grid-column-start: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .dashboard_card_3
+  {
+    grid-column-start: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   
   .Profits 
@@ -48,7 +89,7 @@
     overflow: hidden;
     display: flex;
     align-items: flex-start;
-    margin-left: 2.1rem;
+    margin-left: 4.1rem;
     justify-content: center;
     flex-direction: column;
   }
