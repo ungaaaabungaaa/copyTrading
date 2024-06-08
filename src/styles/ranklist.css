@@ -1,0 +1,24 @@
+/* Leaderboard Cards */
+
+.leadboard_card
+{
+    width: 55%;
+    background-color: transparent;
+    height: auto;
+    padding: 0.4%;
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: start;
+}
+
+#leadboard_card_profile_1,#leadboard_card_profile_2,#leadboard_card_profile_3,#leadboard_card_profile_4
+{
+    width: 55px;
+    border-radius: 50%;
+    height: 55px;
+    text-align: start;
+    object-fit: contain;
+}

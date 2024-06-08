@@ -1,99 +1,75 @@
-.dashboard
-{
+.container {  display: grid;
     width: 100vw;
-    height: 140vh;
-    margin-top: 2.1%;
-    margin-bottom: 2.1%;
-    display: grid;
+    height: 160vh;
     grid-template-columns: 5% 30% 30% 30% 5%;
-    grid-template-rows: 35% 45% 20%;
-}
-
-.dashboard_hero
-{
+    grid-template-rows: 45% 35% 20%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". My-Money My-Money Profits ."
+      ". Daily-Profits LeaderBoard LeaderBoard ."
+      ". referal referal referal .";
+  }
+  
+  .My-Money 
+  { 
+    grid-area: My-Money;
     width: 100%;
     height: 100%;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-row-start: 1;
-}
-
-.dashboard_card_1
-{
-    grid-column-start: 1;
-    width: 92%;
-    background-color: #2b2d31;
-    border-radius: 1.2rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-.dashboard_card_2
-{
-    grid-column-start: 2;
-    width: 92%;
-    background-color: #2b2d31;
-    border-radius: 1.2rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.dashboard_card_3
-{
-    grid-column-start: 3;
-    width: 92%;
-    background-color: #2b2d31;
-    border-radius: 1.2rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.leaderboard
-{
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    margin-top: 1.2%;
-    margin-bottom: 1.2%;
+   
+    
+  }
+  
+  .Profits 
+  { 
+    grid-area: Profits; 
     width: 100%;
+    height: 100%;
+  }
+  
+  .Daily-Profits 
+  { 
+    grid-area: Daily-Profits; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 2.2rem;
+    background-color: #2b2d31;
+  }
+  
+  .LeaderBoard 
+  { 
+    grid-area: LeaderBoard; 
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    height: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 2.1rem;
     justify-content: center;
-}
-
-
-
-.Referral_Program
-{
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 3;
+    flex-direction: column;
+  }
+  
+  .referal 
+  { 
+    grid-area: referal; 
     width: 100%;
+    height: 100%;
+  }
+
+  .Referral_Program_box
+    {
+    border: solid 1px ;
+    padding: 2.1%;
+    border-radius: 1.2rem;
     height: auto;
     display: flex;
     text-align: start;
     align-content: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.Referral_Program_box
-{
-    border: solid 1px ;
-    padding: 2.1%;
-    border-radius: 1.2rem;
-}
+    }
+  
