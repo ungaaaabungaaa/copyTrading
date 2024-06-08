@@ -29,6 +29,8 @@ function Dashboard() {
     const [profit, setProfit] = useState(0);
     const [depositDate, setDepositDate] = useState('N/A');
     const [profitDate, setProfitDate] = useState('N/A');
+    const [ReferralURL , setReferralUrl] = useState('https://tradeshub.com/ref/Blank');
+    const [DailyProfits, setDailyProfits] = useState(0);
 
     useEffect(() => {
         const fetchProfile = async () => {
@@ -42,6 +44,8 @@ function Dashboard() {
                     setProfit(profileData.profit || 0);
                     setDepositDate(profileData.depositDate || 'N/A');
                     setProfitDate(formattedDate);
+                    setReferralUrl(profileData.ReferralUrl);
+                    setDailyProfits(profileData.DailyProfits);
                 } else {
                     showSnackbar('Profile data not found');
                 }
@@ -65,17 +69,17 @@ function Dashboard() {
                 <div class="My-Money">
                     <div className='userdata'>
                         <div className='dashboard_card_1'>
-                            <p>My Money</p>
+                            <h3>My Money</h3>
                             <h1 className='highlight'>${totalMoney.toFixed(2)}</h1>
                             <p>Deposited on {depositDate}</p>
                         </div>
                         <div className='dashboard_card_2'>
-                            <p>Deposited</p>
+                            <h3>Deposited</h3>
                             <h1 className='highlight'>${depositAmount.toFixed(2)}</h1>
                             <p>Deposited on {depositDate}</p>
                         </div>
                         <div className='dashboard_card_3'>
-                            <p>Profit</p>
+                            <h3>Profit</h3>
                             <h1 className='highlight'>${profit.toFixed(2)}</h1>
                             <p>Profit since {formattedDate}</p>
                         </div>
@@ -83,9 +87,8 @@ function Dashboard() {
                 </div>
                 <div class="Profits"></div>
                 <div class="Daily-Profits">
-                    <p>Today's </p>
-                    <h4>8.1 <span className='highlight'>%</span></h4>
-                    <p>Daily Profit's </p>
+                    <h4>{DailyProfits}<span className='highlight'>%</span></h4>
+                    <h1>Daily Profit's </h1>
                 </div>
                 <div class="LeaderBoard">
                     <RankList></RankList>
@@ -93,7 +96,7 @@ function Dashboard() {
                 <div class="referal">
                     <h1 className='heading'>Referral <span className='highlight'>Program</span></h1>
                     <p className='bio'>Earn rewards for referring new traders to our platform. Share your unique referral link and get a commission for every new trader that signs up</p>
-                    <p className='Referral_Program_box'>https://tradeshub.com/ref/test</p>
+                    <p className='Referral_Program_box'>{ReferralURL}</p>
                 </div>
             </div>
             <Footer />
