@@ -55,12 +55,16 @@ const Header = () => {
             </div>
             
             <div className='header_buttons'>
+                {/* 
                 <button className='header_button' onClick={handleDashboardClick}>Dashboard</button>
                 <button className='header_button' onClick={handleCompoundClick}>MultiplX</button>
                 <button className='header_button' onClick={handleInvestingClick}>Earning Pool</button>
                 <button className='header_button' onClick={handleWeb3Click}>Web3</button>
+                */}
             </div>
             <div className='header_login'>
+            <button className='header_button2' onClick={handleWeb3Click}>Web3</button>
+                 {/*
                 {currentUser ? (
                     <>
                         <button className='header_login_button' onClick={() => navigate('/profile')}>Profile</button>
@@ -74,6 +78,7 @@ const Header = () => {
                         <button className='header_button2' onClick={() => navigate('/signup')}>Signup</button>
                     </>
                 )}
+                     */}
             </div>
         </div>
         </>
