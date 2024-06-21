@@ -41,7 +41,7 @@ const Header = () => {
     };
 
     const handleWeb3Click = () => {
-        window.location.href = 'https://www.google.com';
+        window.location.href = 'https://violet-electric-asp-590.mypinata.cloud/ipfs/QmefNUaXtmoFVwPwA2XV75tK7U2BAXvcXgzK7ej9czPCX9/?pinataGatewayToken=Q6fF7ss81U3u8m3DhB5gt8jqxcaxKg8WjWQvjVzwTQKzf8lDOwvHmtF3qiBzh4y-';
     };
 
 
